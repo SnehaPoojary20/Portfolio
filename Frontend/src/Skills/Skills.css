@@ -1,0 +1,28 @@
+.skills{
+    margin-top: 30vh;
+    margin-bottom: 20vh;
+    align-items: center;
+    text-align: center;
+}
+
+.languages{
+ padding-top: 5%;
+}
+
+.icon-tooltip{
+    padding-left: 30vh;
+    text-align: left;
+    padding-top: 2%;
+}
+
+.tooltip-text{
+    padding-left: 1%;
+}
+
+.frontend{
+    padding-top: 5%;
+}
+
+.backend{
+     padding-top: 5%;
+}

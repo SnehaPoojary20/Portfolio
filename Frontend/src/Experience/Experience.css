@@ -1,0 +1,29 @@
+.experience{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    align-items: center;
+    text-align: center;
+}
+
+.experience h1{
+     padding-top: 8%;
+}
+
+.experience h3{
+     padding-top: 8%;
+}
+
+.experience h5{
+  padding-left: 10vh;
+  padding-top: 5%;
+  text-align: left;
+}
+
+.email{
+     padding-top: 3%;
+     height: 400px;
+     width: 900px;
+     align-items: center;
+     padding-left: 10vh;
+     
+}
