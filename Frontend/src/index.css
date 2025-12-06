@@ -2,14 +2,15 @@
 
 
 body{
-  background-color:teal;
+  background-color:#F1EDE2;
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
    font-family: "Montserrat", sans-serif;
 }
 
 *{
+   background-color:#F1EDE2;
    font-family: "Montserrat", sans-serif;
-   color:#FFFDD0;
+   color:black;
    } 

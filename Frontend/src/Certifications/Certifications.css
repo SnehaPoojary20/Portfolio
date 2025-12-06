@@ -1,20 +1,21 @@
-.contact {
-  color: black;
-  margin-top: 10vh;
+.achievements {
+  margin: 10vh auto 10vh auto;
   text-align: center;
-  padding: 5% 2%;
+  padding: 0 2%;
   font-family: 'Arial', sans-serif;
+  color: #222;
+   margin-top: 20%;
 }
 
-.contact-heading {
+.achievements-heading {
   font-size: 2rem;
   margin-bottom: 40px;
   font-weight: 700;
-  margin-top: 20%;
-  margin-bottom: 3%;
+  color: black;
+   margin-bottom: 5%;
 }
 
-.contact-cards {
+.certifications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -22,48 +23,53 @@
   align-items: start;
 }
 
-.contact-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255,255,255,0.2);
+.cert-card {
+  background: #fff;
   border-radius: 12px;
   padding: 25px 20px;
-  width: 100%;
-  max-width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 300px;
 }
 
-.contact-card:hover {
+.cert-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-  border-color: #4b4bff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
-.contact-icon {
+.cert-icon {
   font-size: 2rem;
-  margin-bottom: 15px;
   color: #4b4bff;
+  margin-bottom: 15px;
 }
 
-.contact-card h3 {
-  margin-bottom: 10px;
+.cert-title {
   font-size: 1.2rem;
-  color: black;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
-.contact-card p {
+.cert-platform {
   font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
   margin-bottom: 10px;
-  word-wrap: break-word;
 }
 
-.contact-card a {
+.cert-desc {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.cert-link {
   text-decoration: none;
   color: #ff4bff;
   font-weight: 600;
   transition: color 0.3s;
 }
 
-.contact-card a:hover {
+.cert-link:hover {
   color: #4b4bff;
 }

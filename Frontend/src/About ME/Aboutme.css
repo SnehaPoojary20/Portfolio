@@ -1,16 +1,61 @@
-.about{
-    margin-top: 30vh;
-    margin-bottom: 20vh;
-    align-items: center;
-    text-align: center;
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 10vh auto 10vh auto;
+  padding: 0 5vw;
+  animation: fadeInUp 0.8s ease;
+  flex-wrap: wrap; 
+  margin-top: 10%;
+ }
+
+.image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: center;
 }
 
-.about h4{
-    padding-left: 20vh;
-    padding-right: 20vh;
-    text-align: center;
+.profile-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.profile-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+  flex: 2;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.description h1 {
+  font-size: 2.4rem;
+  color: #1A1A1A;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.description h1 span {
+  color: #A38B71; 
+}
+
+.description h4 {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4C4C4C;
+  text-align: left;
+}
+
+/* Fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -22,25 +67,26 @@
   }
 }
 
-.card{
-    height: 600px;
-    width: 700px;
-    margin-left: 45vh;
-    align-items: center;
-    border: 1px solid #FFFDD0;
-    border-radius: 20px;
-    margin-bottom: 5%;
-    box-shadow: 2px 4px 4px 8px gold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-     animation: fadeInUp 0.6s ease forwards;
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 8vh;
+  }
+
+  .description h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .description h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .image {
+    max-width: 300px;
+  }
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top{
-    height:600px ;
-    width: 700px;
-}
