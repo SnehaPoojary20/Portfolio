@@ -56,7 +56,7 @@ const Achievements = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            {item.image && <img src={item.image} alt={item.title} className='achievement-img' />}
+            {/* {item.image && <img src={item.image} alt={item.title} className='achievement-img' />} */}
           </div>
         ))}
       </div>
