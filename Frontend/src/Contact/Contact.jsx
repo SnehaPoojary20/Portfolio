@@ -3,12 +3,6 @@ import "./Contact.css";
 import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaFileAlt } from "react-icons/fa";
 
 const Contact = () => {
-  const email = import.meta.env.VITE_EMAIL;
-  const linkedin = import.meta.env.VITE_LINKEDIN;
-  const github = import.meta.env.VITE_GITHUB;
-  const location = import.meta.env.VITE_LOCATION;
-  const resume = import.meta.env.VITE_RESUME;
-
   return (
     <section className='contact'>
       <h1 className='contact-heading'>Let’s Connect and Build Something Awesome Together!</h1>
@@ -17,47 +11,40 @@ const Contact = () => {
         <div className='contact-card'>
           <FaEnvelope className='contact-icon'/>
           <h3>Email</h3>
-          <p>{email}</p>
-          <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
-            Email Me
-          </a>
+          <p>snehapoojary2004@gmail.com</p>
+          <a href="mailto:snehapoojary2004@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
         </div>
 
         <div className='contact-card'>
           <FaLinkedin className='contact-icon'/>
           <h3>LinkedIn</h3>
-          <p>{linkedin}</p>
-          <a href={linkedin} target="_blank" rel="noopener noreferrer">
-            Visit Profile
-          </a>
+          <p>https://www.linkedin.com/in/snehapoojary20/</p>
+          <a href='https://www.linkedin.com/in/snehapoojary20/' target="_blank" rel="noopener noreferrer">Visit Profile</a>
         </div>
 
         <div className='contact-card'>
           <FaGithub className='contact-icon'/>
           <h3>GitHub</h3>
-          <p>{github}</p>
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            View Repositories
-          </a>
+          <p>https://github.com/SnehaPoojary20</p>
+          <a href='https://github.com/SnehaPoojary20' target="_blank" rel="noopener noreferrer">View Repositories</a>
         </div>
 
         <div className='contact-card'>
           <FaMapMarkerAlt className='contact-icon'/>
           <h3>Location</h3>
-          <p>{location}</p>
+          <p>Bhiwandi, Maharashtra, India</p>
         </div>
 
         <div className='contact-card'>
           <FaFileAlt className='contact-icon'/>
           <h3>Resume</h3>
-          <p>Google Docs</p>
-          <a href={resume} target="_blank" rel="noopener noreferrer">
-            View Resume
-          </a>
+          <p>Google Docs Link</p>
+          <a href='https://drive.google.com/file/d/1CtMPJCka4ehMVlcb1nfY442l4-z8MWJf/view?usp=sharing' target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Contact;
+
