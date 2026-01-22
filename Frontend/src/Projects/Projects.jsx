@@ -4,79 +4,93 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "NibbleNote – Restaurant Review Web App",
-    date: "Oct 2025",
-    points: [
-      "Built a full-stack MERN application enabling users to discover restaurants and post reviews, resulting in a 40% faster review submission flow compared to the initial prototype.",
-      "Integrated Google Maps API, improving location accuracy by 90% and increasing user engagement on the map view by 35%.",
-      "Designed optimized APIs that reduced data fetch time by 25% using efficient indexing and query structuring.",
-      "Implemented secure authentication using JWT, reducing unauthorized access attempts by 100% during internal testing."
+    title: "NibbleNote — Full-Stack Note-Taking Platform",
+    description: [
+      "Built a secure full-stack note-taking application with authentication, authorization, and complete CRUD workflows for persistent, user-specific data storage.",
+      "Designed RESTful backend APIs and optimized MongoDB queries using indexing and efficient schema design to reduce response latency and support scalable data access.",
+      "Applied modular architecture and strict separation of concerns across frontend and backend, improving maintainability and long-term extensibility."
     ],
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Maps API", "JWT", "Axios", "Vercel"],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
     github: "https://github.com/SnehaPoojary20/NibbleNote"
   },
   {
-    title: "EventNest – College Event Management System",
-    date: "Nov 2025",
-    points: [
-      "Developed a role-based event platform used by 500+ students, handling 150+ event registrations during testing.",
-      "Devised and launched a QR code check-in system using qrcode.react, decreasing manual verification by 70% and accelerating check-in times by 3 minutes.",
-      "Automated email notifications with 95% delivery success, improving event communication.",
-      "Designed real-time dashboards using Chart.js, increasing admin efficiency by 60%."
+    title: "In-Memory Cache with LRU Eviction & TTL",
+    description: [
+      "Architected an O(1) in-memory key-value cache in Java using a custom HashMap and Doubly Linked List, simulating internals of production caches like Redis.",
+      "Implemented Least Recently Used (LRU) eviction and TTL-based expiration to balance memory efficiency with data freshness.",
+      "Stress-tested the cache under concurrent access to analyze latency, throughput, and eviction behavior under load."
     ],
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "qrcode.react", "Nodemailer", "Chart.js", "Vercel"],
-    github: "https://github.com/SnehaPoojary20/EventNest"
+    tech: ["Java", "Data Structures", "Concurrency", "Benchmarking"],
+    github: "https://github.com/SnehaPoojary20/In-Memory-Cache-with-LRU-Eviction-and-TTL"
   },
   {
-    title: "Captionify – AI Caption Generator",
-    date: "Dec 2025",
-    points: [
-      "Built an AI-powered caption generator improving user caption creation speed by 80% through automated suggestions.",
-      "Integrated Cloudinary image upload, reducing upload latency by 30% and increasing reliability to 99% uptime.",
-      "Improved user engagement by 45% through social media sharing features and personalized caption history.",
-      "Orchestrated Firebase authentication, achieving a 100% login success rate during rigorous testing."
+    title: "PulseGuard — Distributed Monitoring & Alerting System",
+    description: [
+      "Engineered a high-throughput monitoring system using Redis for centralized state management and WebSockets for real-time, sub-second alert delivery.",
+      "Implemented a sliding window rate limiter to prevent alert storms and ensure stability during traffic spikes.",
+      "Offloaded heavy monitoring and aggregation tasks to asynchronous worker queues, reducing main-thread blocking by approximately 60%."
     ],
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "OpenAI API", "Firebase", "Cloudinary", "Vercel"],
-    github: "https://github.com/SnehaPoojary20/Captionify"
+    tech: ["Node.js", "FastAPI", "Redis", "WebSockets", "Async Processing", "Docker"],
+    github: "https://github.com/SnehaPoojary20/PulseGuard"
   }
 ];
 
 const Projects = () => {
   return (
     <section className="projects-section">
-      <h1 className="projects-heading">Projects</h1>
+      <h1 className="projects-heading">Selected Projects</h1>
 
-      <div className="projects-grid">
+      <div className="projects-list">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <div className="project-header">
+          <div
+            key={index}
+            className={`project-item ${index % 2 === 0 ? "align-left" : "align-right"}`}
+          >
+            <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
-              <span className="project-date">{project.date}</span>
+
+              <ul className="project-description">
+                {project.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+
+              <div className="project-tech">
+                {project.tech.map((tech, i) => (
+                  <span key={i} className="tech-pill">{tech}</span>
+                ))}
+              </div>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <FaGithub /> View Source
+              </a>
             </div>
-
-            <ul className="project-list">
-              {project.points.map((point, i) => (
-                <li key={i}>• {point}</li>
-              ))}
-            </ul>
-
-            <div className="project-tech">
-              {project.tech.map((tech, i) => (
-                <span key={i} className="tech-badge">{tech}</span>
-              ))}
-            </div>
-
-            <a href={project.github} className="project-github">
-              <FaGithub className="github-icon"/> View Repository
-            </a>
           </div>
         ))}
       </div>
+
+      <p className="projects-footer">
+        For additional projects and deeper system implementations, please visit my{" "}
+        <a
+          href="https://github.com/SnehaPoojary20"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub profile
+        </a>.
+      </p>
     </section>
   );
 };
 
 export default Projects;
+
+
 
 
 

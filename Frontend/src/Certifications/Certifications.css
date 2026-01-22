@@ -1,75 +1,88 @@
 .achievements {
-  margin: 10vh auto 10vh auto;
-  text-align: center;
-  padding: 0 2%;
-  font-family: 'Arial', sans-serif;
-  color: #222;
-   margin-top: 20%;
+  max-width: 1000px;
+  margin: 14vh auto;
+  padding: 0 6vw;
+  margin-top: 20%;
 }
 
 .achievements-heading {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: black;
-   margin-bottom: 5%;
-}
-
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: start;
-}
-
-.cert-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 25px 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%;
-  max-width: 300px;
-}
-
-.cert-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-}
-
-.cert-icon {
-  font-size: 2rem;
-  color: #4b4bff;
-  margin-bottom: 15px;
-}
-
-.cert-title {
-  font-size: 1.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+/* List layout */
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Each row */
+.cert-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.cert-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Icon */
+.cert-icon {
+  font-size: 1.4rem;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* Text content */
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
 }
 
 .cert-platform {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #555;
-  margin-bottom: 10px;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 .cert-desc {
-  font-size: 0.9rem;
-  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .cert-link {
-  text-decoration: none;
-  color: #ff4bff;
+  font-size: 0.9rem;
   font-weight: 600;
-  transition: color 0.3s;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 .cert-link:hover {
-  color: #4b4bff;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cert-row {
+    gap: 18px;
+  }
+
+  .achievements-heading {
+    font-size: 2rem;
+  }
 }

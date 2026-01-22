@@ -1,77 +1,69 @@
 .achievements-section {
-  margin: 10vh auto;
-  padding: 0 2%;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  color: #222;
+  max-width: 1000px;
+  margin: 14vh auto;
+  padding: 0 6vw;
+  color: #111;
   margin-top: 20%;
-  align-items: center;
 }
 
 .section-heading {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: black;
-  margin-bottom: 3%;
+  margin-bottom: 70px;
 }
 
-.category {
-  margin-bottom: 50px;
+/* Category block */
+.achievements-category {
+  margin-bottom: 60px;
 }
 
-.category h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.achievement-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px 25px;
-  margin-bottom: 30px;
-  text-align: left;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.achievement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-}
-
-.achievement-card h3 {
+.category-heading {
   font-size: 1.2rem;
-  margin-bottom: 5px;
   font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 8px;
 }
 
-.date {
+/* Individual achievement */
+.achievement-item {
+  margin-bottom: 36px;
+}
+
+.achievement-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.achievement-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Bullet points */
+.achievement-points {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.achievement-points li {
   font-size: 0.95rem;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-.achievement-card ul {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.achievement-card li {
+  color: #333;
+  line-height: 1.6;
   margin-bottom: 6px;
-  line-height: 1.5;
 }
 
-.achievement-img {
-  margin-top: 15px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* Mobile */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
 }
+

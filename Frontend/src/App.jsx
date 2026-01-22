@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Aboutme from './About ME/Aboutme';
+import Education from './Education/Education.jsx';
 import Projects from './Projects/Projects';
 import Certifications from "./Certifications/Certifiactions.jsx"
 import Skills from './Skills/Skills';
@@ -17,6 +18,7 @@ function App() {
        <Aboutme/>
        <div className='content'>
         <Skills/>
+        <Education/>
         <Projects/>
         <Certifications/>
         <Achievements/>

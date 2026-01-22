@@ -1,46 +1,71 @@
 import React from "react";
 import "./Skills.css";
 
-import { SiJavascript, SiRedux, SiMongodb, SiFastapi, SiPostman } from "react-icons/si";
-import { FaPython, FaJava, FaHtml5, FaCss3, FaReact, FaNodeJs, FaGit, FaGithub, FaDocker } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { DiMysql } from "react-icons/di";
-import { VscVscode } from "react-icons/vsc";
-
-const skills = [
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3 /> },
-  { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "React.js", icon: <FaReact /> },
-  { name: "Redux", icon: <SiRedux /> },
-  { name: "Tailwind", icon: <RiTailwindCssFill /> },
-  { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "FastAPI", icon: <SiFastapi /> },
-  { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "SQL", icon: <DiMysql /> },
-  { name: "GitHub", icon: <FaGithub /> },
-  { name: "Docker", icon: <FaDocker /> }
+const skillSections = [
+  {
+    title: "System Design & Engineering",
+    items: [
+      "System Design Fundamentals",
+      "Scalability & Load Handling",
+      "Caching (LRU, TTL)",
+      "Rate Limiting (Sliding Window)",
+      "Concurrency & Thread Safety",
+      "Asynchronous Processing",
+      "REST API Design"
+    ]
+  },
+  {
+    title: "Computer Science Fundamentals",
+    items: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "Operating Systems",
+      "Database Management Systems",
+      "Computer Networks",
+      "Time & Space Complexity"
+    ]
+  },
+  {
+    title: "Programming Languages",
+    items: ["Java", "Python", "JavaScript"]
+  },
+  {
+    title: "Frontend",
+    items: ["React.js", "Redux", "HTML", "CSS", "Tailwind CSS"]
+  },
+  {
+    title: "Backend & Databases",
+    items: ["Node.js", "FastAPI", "MongoDB", "SQL"]
+  },
+  {
+    title: "Tools & Platforms",
+    items: ["Git", "GitHub", "Docker", "VS Code"]
+  }
 ];
 
-const SkillsWheel = () => {
+const Skills = () => {
   return (
-    <div className="skills">
-      <h1>Technical Skills</h1>
-      <div className="wheel-container">
-      <div className="wheel">
-        {skills.map((skill, index) => (
-          <div key={index} className={`skill pos-${index}`}>
-            <span className="skill-icon">{skill.icon}</span><br></br>
-            <span className="skill-name">{skill.name}</span>
+    <section className="skills-section">
+      <h1 className="skills-title">Technical Skills</h1>
+
+      <div className="skills-container">
+        {skillSections.map((section, index) => (
+          <div key={index} className="skills-block">
+            <h3 className="skills-heading">{section.title}</h3>
+            <ul className="skills-list">
+              {section.items.map((skill, i) => (
+                <li key={i}>{skill}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-    </div>
-    </div>
+    </section>
   );
 };
 
-export default SkillsWheel;
+export default Skills;
+
 
 
 
