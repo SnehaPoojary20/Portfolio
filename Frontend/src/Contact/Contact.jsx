@@ -39,7 +39,7 @@ const Contact = () => {
           <FaFileAlt className='contact-icon'/>
           <h3>Resume</h3>
           <p>Google Docs Link</p>
-          <a href='https://drive.google.com/file/d/1CtMPJCka4ehMVlcb1nfY442l4-z8MWJf/view?usp=sharing' target="_blank" rel="noopener noreferrer">View Resume</a>
+          <a href='https://drive.google.com/file/d/1P-xg68S5fNXVP5wSMVW5IQLJxKzyba-t/view?usp=drive_link' target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
       </div>
     </section>
