@@ -20,31 +20,18 @@ const Aboutme = () => {
         </h1>
 
         <p className="bio">
-          I am a Software Engineer with strong foundations in Data Structures,
-          Algorithms, and Object-Oriented Design, and hands-on experience
-          building scalable backend systems using Java, JavaScript, and Python.
+          I am a <strong>Computer Engineering student (Class of 2026)</strong> with a passion for building high-performance systems and solving complex algorithmic challenges. With a foundation of <strong>200+ solved LeetCode problems</strong>, I focus on writing clean, efficient code that prioritizes both time and space complexity.
         </p>
 
         <p className="bio">
-          I have designed and optimized RESTful APIs with a focus on correctness,
-          performance, and maintainability, applying concepts such as efficient
-          data modeling, indexing, caching, and asynchronous processing.
+          My experience ranges from architecting <strong>distributed code analysis tools</strong> using FastAPI and Neo4j to developing real-time <strong>telemetry dashboards</strong>. I specialize in optimizing backend efficiency through Redis caching and Protocol Buffers, and I’ve successfully engineered frontends capable of rendering <strong>100k+ data points at a consistent 60FPS</strong>.
         </p>
 
         <p className="bio">
-          I am particularly interested in systems-oriented problems and have
-          implemented core backend components from scratch, including an
-          in-memory cache with O(1) operations, LRU eviction, and TTL-based
-          expiration, and a distributed monitoring and alerting system using
-          Redis and WebSockets.
+          Beyond personal projects, I am an active contributor to the <strong>Open Source community</strong>, recently refactoring core components for EduLinkUp to improve system scalability. I thrive on systems-oriented problems and am always looking for ways to bridge robust infrastructure with high-throughput performance.
         </p>
 
-        <p className="bio">
-          Alongside development, I actively strengthen my algorithmic
-          problem-solving skills and have solved 170+ problems on LeetCode,
-          with emphasis on time and space complexity, edge-case handling,
-          and clear reasoning.
-        </p>
+       
       </div>
     </section>
   );

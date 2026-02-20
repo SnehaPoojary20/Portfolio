@@ -41,6 +41,15 @@ const Contact = () => {
           <p>Google Docs Link</p>
           <a href='https://drive.google.com/file/d/1P-xg68S5fNXVP5wSMVW5IQLJxKzyba-t/view?usp=drive_link' target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
+
+        <div className='contact-card'>
+          <FaFileAlt className='contact-icon'/>
+          <h3>Blogs</h3>
+          <p>Technical Blogs Link</p>
+          <a href='https://hashnode.com/@snehapoojary' target="_blank" rel="noopener noreferrer">View Blogs</a>
+        </div>
+
+
       </div>
     </section>
   )

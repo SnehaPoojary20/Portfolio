@@ -8,8 +8,7 @@ const projects = [
     description: [
       "Developed a full-stack note-taking application featuring real-time synchronization and a clean, responsive UI.",
       "Implemented a markdown-based editor with instant preview and auto-save functionality to prevent data loss.",
-      "Optimized database queries to ensure fast retrieval of user notes and organized content using custom tags.
-"
+      "Optimized database queries to ensure fast retrieval of user notes and organized content using custom tags."
     ],
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
     github: "https://github.com/SnehaPoojary20/NibbleNote"
