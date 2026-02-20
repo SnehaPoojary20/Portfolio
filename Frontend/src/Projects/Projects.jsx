@@ -25,14 +25,14 @@ const projects = [
     github: "https://github.com/SnehaPoojary20/Code-Intelligence-System"
   },
   {
-    title: "PulseGuard — Distributed Monitoring & Alerting System",
+    title: "Chronos Observability Workbench",
     description: [
-      "Engineered a high-throughput monitoring system using Redis for centralized state management and WebSockets for real-time, sub-second alert delivery.",
-      "Implemented a sliding window rate limiter to prevent alert storms and ensure stability during traffic spikes.",
-      "Offloaded heavy monitoring and aggregation tasks to asynchronous worker queues, reducing main-thread blocking by approximately 60%."
+      " Created a telemetry dashboard that stays smooth (60FPS) while rendering 100k+ data points",
+      "Moved heavy data processing to Web Workers, reducing main-thread lag by 90% during high traffic",
+      " Switched from JSON to Protocol Buffers for data transfer, cutting payload sizes by 65%."
     ],
-    tech: ["Node.js", "FastAPI", "Redis", "WebSockets", "Async Processing", "Docker"],
-    github: "https://github.com/SnehaPoojary20/PulseGuard"
+    tech: ["React","Node.js", " Web Workers", "HTML", "WebSockets", " Protobuf"],
+    github: "https://github.com/SnehaPoojary20/Chronos-Observability-Workbench"
   }
 ];
 
