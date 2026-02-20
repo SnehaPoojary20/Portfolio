@@ -6,22 +6,23 @@ const projects = [
   {
     title: "NibbleNote — Full-Stack Note-Taking Platform",
     description: [
-      "Built a secure full-stack note-taking application with authentication, authorization, and complete CRUD workflows for persistent, user-specific data storage.",
-      "Designed RESTful backend APIs and optimized MongoDB queries using indexing and efficient schema design to reduce response latency and support scalable data access.",
-      "Applied modular architecture and strict separation of concerns across frontend and backend, improving maintainability and long-term extensibility."
+      "Developed a full-stack note-taking application featuring real-time synchronization and a clean, responsive UI.",
+      "Implemented a markdown-based editor with instant preview and auto-save functionality to prevent data loss.",
+      "Optimized database queries to ensure fast retrieval of user notes and organized content using custom tags.
+"
     ],
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
     github: "https://github.com/SnehaPoojary20/NibbleNote"
   },
   {
-    title: "In-Memory Cache with LRU Eviction & TTL",
+    title: "Code Intelligence System",
     description: [
-      "Architected an O(1) in-memory key-value cache in Java using a custom HashMap and Doubly Linked List, simulating internals of production caches like Redis.",
-      "Implemented Least Recently Used (LRU) eviction and TTL-based expiration to balance memory efficiency with data freshness.",
-      "Stress-tested the cache under concurrent access to analyze latency, throughput, and eviction behavior under load."
+      "Built a tool using FastAPI and Tree-sitter to analyze code structures and find circular dependencies.",
+      " Used Neo4j to map out code relationships, making dependency lookups 60% faster than standard databases.",
+      "Created a background pipeline with Celery to calculate ”bug-risk” scores using an XGBoost model."
     ],
-    tech: ["Java", "Data Structures", "Concurrency", "Benchmarking"],
-    github: "https://github.com/SnehaPoojary20/In-Memory-Cache-with-LRU-Eviction-and-TTL"
+    tech: ["Python(FastAPI)", "Neo4j", "Redis", "Celery","Tree-sitter","XGBoost","Docker"],
+    github: "https://github.com/SnehaPoojary20/Code-Intelligence-System"
   },
   {
     title: "PulseGuard — Distributed Monitoring & Alerting System",
