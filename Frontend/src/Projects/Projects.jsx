@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "NibbleNote — Full-Stack Note-Taking Platform",
+    title: "NibbleNote",
     description: [
       "Developed a full-stack note-taking application featuring real-time synchronization and a clean, responsive UI.",
       "Implemented a markdown-based editor with instant preview and auto-save functionality to prevent data loss.",
