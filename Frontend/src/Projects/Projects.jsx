@@ -14,24 +14,24 @@ const projects = [
     github: "https://github.com/SnehaPoojary20/NibbleNote"
   },
   {
-    title: "Code Intelligence System",
+    title: "Silent Bug Predictor",
     description: [
-      "Built a tool using FastAPI and Tree-sitter to analyze code structures and find circular dependencies.",
-      " Used Neo4j to map out code relationships, making dependency lookups 60% faster than standard databases.",
-      "Created a background pipeline with Celery to calculate ”bug-risk” scores using an XGBoost model."
+      "Engineered an ML-based system to predict bug-prone files using commit churn and structural complexity metrics.",
+      "Trained and evaluated an XGBoost classifier achieving 75%+ precision on historical repository data.",
+      "Developed a FastAPI backend to analyze GitHub repositories and generate probabilistic risk scores."
     ],
-    tech: ["Python(FastAPI)", "Neo4j", "Redis", "Celery","Tree-sitter","XGBoost","Docker"],
-    github: "https://github.com/SnehaPoojary20/Code-Intelligence-System"
+    tech: ["Python(FastAPI)", "XGBoost", "Pandas", " GitHub API","Docker"],
+    github: "https://github.com/SnehaPoojary20/Silent-Bug-Predictor"
   },
   {
-    title: "Chronos Observability Workbench",
+    title: "Explain My Code",
     description: [
-      " Created a telemetry dashboard that stays smooth (60FPS) while rendering 100k+ data points",
-      "Moved heavy data processing to Web Workers, reducing main-thread lag by 90% during high traffic",
-      " Switched from JSON to Protocol Buffers for data transfer, cutting payload sizes by 65%."
+      "Designed a context-aware code analysis engine using AST and Tree-sitter to construct function-level call graphs.",
+      "Implemented structured semantic extraction to generate accurate function-specific summaries.",
+      "Built modular FastAPI endpoints for scalable, real-time code interpretation."
     ],
-    tech: ["React","Node.js", " Web Workers", "HTML", "WebSockets", " Protobuf"],
-    github: "https://github.com/SnehaPoojary20/Chronos-Observability-Workbench"
+    tech: ["Python(FastAPI)","AST", "Tree-sitter", "NetworkX", "OpenAI API", "Docker"],
+    github: "https://github.com/SnehaPoojary20/Explain-My-Code"
   }
 ];
 
