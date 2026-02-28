@@ -3,15 +3,27 @@ import "./Skills.css";
 
 const skillSections = [
   {
-    title: "System Design & Engineering",
+    title: "Backend Engineering",
     items: [
-      "System Design Fundamentals",
-      "Scalability & Load Handling",
-      "Caching (LRU, TTL)",
-      "Rate Limiting (Sliding Window)",
-      "Concurrency & Thread Safety",
-      "Asynchronous Processing",
-      "REST API Design"
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "REST API Design",
+      "WebSockets",
+      "Asynchronous Programming",
+      "Docker"
+    ]
+  },
+  {
+    title: "Machine Learning & Code Intelligence",
+    items: [
+      "XGBoost",
+      "Scikit-learn",
+      "Pandas",
+      "Feature Engineering",
+      "AST Parsing",
+      "Tree-sitter",
+      "NetworkX"
     ]
   },
   {
@@ -21,25 +33,26 @@ const skillSections = [
       "Object-Oriented Programming (OOP)",
       "Operating Systems",
       "Database Management Systems",
-      "Computer Networks",
       "Time & Space Complexity"
     ]
   },
   {
     title: "Programming Languages",
-    items: ["Java", "Python", "JavaScript"]
+    items: ["Python", "Java", "JavaScript"]
   },
   {
     title: "Frontend",
     items: ["React.js", "Redux", "HTML", "CSS", "Tailwind CSS"]
   },
   {
-    title: "Backend & Databases",
-    items: ["Node.js", "FastAPI", "MongoDB", "SQL"]
-  },
-  {
-    title: "Tools & Platforms",
-    items: ["Git", "GitHub", "Docker", "VS Code"]
+    title: "Databases & Tools",
+    items: [
+      "MongoDB",
+      "SQL",
+      "Firebase",
+      "Git",
+      "GitHub Actions"
+    ]
   }
 ];
 

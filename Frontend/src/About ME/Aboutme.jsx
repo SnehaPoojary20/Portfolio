@@ -19,17 +19,17 @@ const Aboutme = () => {
           Hello, I’m <span>Sneha Poojary</span>
         </h1>
 
-        <p className="bio">
-          I am a <strong>Computer Engineering student (Class of 2026)</strong> with a passion for building high-performance systems and solving complex algorithmic challenges. With a foundation of <strong>200+ solved LeetCode problems</strong>, I focus on writing clean, efficient code that prioritizes both time and space complexity.
-        </p>
+     <p className="bio">
+  I am a <strong>Computer Engineering student (Class of 2026)</strong> with strong foundations in Data Structures and Algorithms and 200+ solved coding problems. I focus on building scalable backend systems with clean architecture and performance-driven design.
+</p>
 
-        <p className="bio">
-          My experience ranges from architecting <strong>distributed code analysis tools</strong> using FastAPI and Neo4j to developing real-time <strong>telemetry dashboards</strong>. I specialize in optimizing backend efficiency through Redis caching and Protocol Buffers, and I’ve successfully engineered frontends capable of rendering <strong>100k+ data points at a consistent 60FPS</strong>.
-        </p>
+<p className="bio">
+  I have engineered <strong>ML-driven code intelligence tools</strong>, including a bug-risk prediction system using XGBoost and a context-aware code analysis engine built with AST and Tree-sitter. My work centers around repository analytics, feature engineering, and high-performance API development using FastAPI.
+</p>
 
-        <p className="bio">
-          Beyond personal projects, I am an active contributor to the <strong>Open Source community</strong>, recently refactoring core components for EduLinkUp to improve system scalability. I thrive on systems-oriented problems and am always looking for ways to bridge robust infrastructure with high-throughput performance.
-        </p>
+<p className="bio">
+  I enjoy solving systems-oriented problems and building developer-focused tools that combine backend engineering with applied machine learning to automate and optimize software analysis workflows.
+</p>
 
        
       </div>
