@@ -29,35 +29,6 @@ It’s designed to provide a clear, elegant view of my work, emphasizing readabi
 * **Contact:** Easy way to reach me via email or social links
 
 ---
-
-## 🚀 Projects Highlighted
-
-1. **NibbleNote – Full-Stack Note-Taking App**
-
-   * Secure user authentication and authorization with persistent data storage
-   * RESTful API design and optimized MongoDB queries
-   * Modular frontend-backend architecture for maintainability
-   * **Tech:** React.js, Node.js, Express.js, MongoDB, JWT, REST APIs, Vercel
-   * [GitHub Repository](https://github.com/SnehaPoojary20/NibbleNote)
-
-2. **In-Memory Cache with LRU Eviction and TTL**
-
-   * Designed O(1) key-value store in Java with LRU eviction and TTL-based expiration
-   * High-performance under concurrent loads
-   * **Tech:** Java, Multi-threading, Data Structures
-   * [GitHub Repository](https://github.com/SnehaPoojary20/In-Memory-Cache-with-LRU-Eviction-and-TTL)
-
-3. **PulseGuard – Distributed Monitoring & Alerting System**
-
-   * High-throughput system with Redis for state management and WebSockets for real-time alerts
-   * Sliding Window Rate Limiter to prevent notification storms
-   * Asynchronous Worker Queues for optimized performance
-   * **Tech:** Node.js, Redis, WebSockets, FastAPI, Docker
-
-*For more projects, check out my [GitHub profile](https://github.com/SnehaPoojary20).*
-
----
-
 ## ⚡ Design & UX Principles
 
 * **Responsive Design:** Optimized for desktop, tablet, and mobile screens
