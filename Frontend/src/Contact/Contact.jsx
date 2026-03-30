@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Contact.css";
 import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaFileAlt } from "react-icons/fa";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -30,6 +31,20 @@ const Contact = () => {
         </div>
 
         <div className='contact-card'>
+          <SiLeetcode className='contact-icon'/>
+          <h3>LeetCode</h3>
+          <p>https://leetcode.com/u/SnehaPoojary__/</p>
+          <a href='https://leetcode.com/u/SnehaPoojary__/' target="_blank" rel="noopener noreferrer">View Profile</a>
+        </div>
+
+        <div className='contact-card'>
+          <SiGeeksforgeeks className='contact-icon'/>
+          <h3>GeeksForGeeks</h3>
+          <p>https://www.geeksforgeeks.org/profile/snehapoojary?tab=activity</p>
+          <a href='https://www.geeksforgeeks.org/profile/snehapoojary?tab=activity' target="_blank" rel="noopener noreferrer">View Profile</a>
+        </div>
+
+        <div className='contact-card'>
           <FaMapMarkerAlt className='contact-icon'/>
           <h3>Location</h3>
           <p>Bhiwandi, Maharashtra, India</p>
@@ -48,7 +63,6 @@ const Contact = () => {
           <p>Technical Blogs Link</p>
           <a href='https://hashnode.com/@snehapoojary' target="_blank" rel="noopener noreferrer">View Blogs</a>
         </div>
-
 
       </div>
     </section>
