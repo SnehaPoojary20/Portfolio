@@ -54,7 +54,7 @@ const Contact = () => {
           <FaFileAlt className='contact-icon'/>
           <h3>Resume</h3>
           <p>Google Docs Link</p>
-          <a href='https://drive.google.com/file/d/1P-xg68S5fNXVP5wSMVW5IQLJxKzyba-t/view?usp=drive_link' target="_blank" rel="noopener noreferrer">View Resume</a>
+          <a href='https://drive.google.com/drive/folders/1WUxGKpBbu02MUqZa72df_PDHrfpOgia4' target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
 
         <div className='contact-card'>
