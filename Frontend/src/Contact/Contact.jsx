@@ -19,7 +19,7 @@ const Contact = () => {
         <div className='contact-card'>
           <FaLinkedin className='contact-icon'/>
           <h3>LinkedIn</h3>
-          <p>https://www.linkedin.com/in/snehapoojary20/</p>
+          <p>https://www.linkedin.com/in/snehapoojary/</p>
           <a href='https://www.linkedin.com/in/snehapoojary20/' target="_blank" rel="noopener noreferrer">Visit Profile</a>
         </div>
 
@@ -70,4 +70,5 @@ const Contact = () => {
 }
 
 export default Contact;
+
 

@@ -16,7 +16,7 @@ const Aboutme = () => {
       {/* Description */}
       <div className="description">
         <h1 className="title">
-          Hello, I’m <span>Sneha Poojary</span>
+          <p className="about-eyebrow">Backend Engineer · AI Tools · Systems Thinker</p>
         </h1>
 
      <p className="bio">
@@ -38,5 +38,6 @@ const Aboutme = () => {
 };
 
 export default Aboutme;
+
 
 
