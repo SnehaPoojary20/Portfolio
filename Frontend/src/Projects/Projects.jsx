@@ -1,43 +1,59 @@
 import React from "react";
 import "./Projects.css";
 import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi"; // Added for live deployment links
 
 const projects = [
   {
     title: "NibbleNote",
+    badge: "Live", // Changed from null to Live since it has a deploy link now
+    tagline: "40% DB latency cut · MERN stack · High-concurrency",
     description: [
-      "Developed a full-stack note-taking application featuring real-time synchronization and a clean, responsive UI.",
-      "Implemented a markdown-based editor with instant preview and auto-save functionality to prevent data loss.",
-      "Optimized database queries to ensure fast retrieval of user notes and organized content using custom tags."
+      "Architected a scalable full-stack platform using the MERN stack designed to manage high-concurrency requests smoothly.",
+      "Engineered modular REST microservices via Node.js and Express.js, integrating secure JWT state verification pipelines.",
+      "Reduced lookup query latency by over 40% by implementing optimized compound indexing patterns within MongoDB.",
+      "Developed fluid, responsive React.js frontends leveraging structured state management architectures for nested interaction feeds.",
+      "Implemented targeted location-aware sorting algorithms and data caching components to scale background feed deliveries."
     ],
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
-    github: "https://github.com/SnehaPoojary20/NibbleNote"
+    tech: ["Node.js", "Express.js", "React.js", "MongoDB", "JWT", "REST APIs", "Vercel", "Render"],
+    github: "https://github.com/SnehaPoojary20/NibbleNote",
+    live: "https://nibble-note.vercel.app"
   },
   {
     title: "Silent Bug Predictor",
+    badge: "Featured",
+    tagline: "75% ML precision · XGBoost · End-to-end pipeline",
     description: [
-      "Engineered an ML-based system to predict bug-prone files using commit churn and structural complexity metrics.",
-      "Trained and evaluated an XGBoost classifier achieving 75%+ precision on historical repository data.",
-      "Developed a FastAPI backend to analyze GitHub repositories and generate probabilistic risk scores."
+      "Built an end-to-end machine learning platform to parse software repository logs and accurately forecast code regression risks.",
+      "Automated high-throughput data processing layers using Pandas and GitHub REST APIs to clean commit metadata streams.",
+      "Trained and optimized an XGBoost binary classification architecture, securing a stable 75% precision rate on production sets.",
+      "Designed responsive React.js analytical dashboards to visualize code health hot-spots and minimize manual triage cycles.",
+      "Structured highly optimized PostgreSQL database relations and utilized Docker containers to guarantee isolated deployments."
     ],
-    tech: ["Python(FastAPI)", "XGBoost", "Pandas", " GitHub API","Docker"],
-    github: "https://github.com/SnehaPoojary20/Silent-Bug-Predictor"
+    tech: ["Python", "FastAPI", "XGBoost", "Pandas", "PostgreSQL", "Docker", "GitHub API", "React.js"],
+    github: "https://github.com/SnehaPoojary20/Silent-Bug-Predictor",
+    live: null // Keep null if this project doesn't have a public deployment link
   },
   {
     title: "Explain My Code",
+    badge: "Live",
+    tagline: "AST · OpenAI GPT-3.5 · Deployed",
     description: [
-      "Designed a context-aware code analysis engine using AST and Tree-sitter to construct function-level call graphs.",
-      "Implemented structured semantic extraction to generate accurate function-specific summaries.",
-      "Built modular FastAPI endpoints for scalable, real-time code interpretation."
+      "Built an AI-powered code analysis tool using Python's AST module to extract function names, arguments, line numbers, and docstrings from submitted Python code without execution.",
+      "Integrated OpenAI GPT-3.5-turbo via asynchronous httpx calls, passing structured AST-extracted context alongside raw code to generate accurate, function-level natural language explanations.",
+      "Built modular FastAPI backend with service-layer separation (ast_service, llm_service), Pydantic request/response validation, and CORS-enabled REST API consumed by a React.js frontend.",
+      "Built React.js frontend with live code editor, line numbers, and structured results display showing per-function breakdown.",
+      "Deployed backend on Railway and frontend on Vercel."
     ],
-    tech: ["Python(FastAPI)","AST", "Tree-sitter", "NetworkX", "OpenAI API", "Docker"],
-    github: "https://github.com/SnehaPoojary20/Explain-My-Code"
+    tech: ["Python", "FastAPI", "AST", "OpenAI API", "httpx", "React.js", "Railway", "Vercel"],
+    github: "https://github.com/SnehaPoojary20/Explain-My-Code",
+    live: "https://explain-my-code-two.vercel.app/"
   }
 ];
 
 const Projects = () => {
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <h1 className="projects-heading">Selected Projects</h1>
 
       <div className="projects-list">
@@ -47,7 +63,38 @@ const Projects = () => {
             className={`project-item ${index % 2 === 0 ? "align-left" : "align-right"}`}
           >
             <div className="project-content">
-              <h3 className="project-title">{project.title}</h3>
+              <div className="project-top">
+                <div className="project-title-row">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.badge && (
+                    <span className="project-badge">{project.badge}</span>
+                  )}
+                </div>
+                <div className="project-links-group" style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    aria-label="GitHub source"
+                  >
+                    <FaGithub size={20} />
+                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link live-link"
+                      aria-label="Live deployment"
+                    >
+                      <FiExternalLink size={20} />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <p className="project-tagline">{project.tagline}</p>
 
               <ul className="project-description">
                 {project.description.map((point, i) => (
@@ -60,29 +107,16 @@ const Projects = () => {
                   <span key={i} className="tech-pill">{tech}</span>
                 ))}
               </div>
-
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                <FaGithub /> View Source
-              </a>
             </div>
           </div>
         ))}
       </div>
 
       <p className="projects-footer">
-        For additional projects and deeper system implementations, please visit my{" "}
-        <a
-          href="https://github.com/SnehaPoojary20"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub profile
-        </a>.
+        More implementations and system-level work on{" "}
+        <a href="https://github.com/SnehaPoojary20" target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
       </p>
     </section>
   );

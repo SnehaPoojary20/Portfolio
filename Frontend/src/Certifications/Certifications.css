@@ -1,88 +1,86 @@
+/* ── CERTIFICATIONS ─────────────────────────────────── */
 .achievements {
   max-width: 1000px;
-  margin: 14vh auto;
-  padding: 0 6vw;
-  margin-top: 20%;
+  margin: 0 auto;
+  padding: 10vh 6vw;
+  border-top: 1px solid var(--rule);
 }
 
 .achievements-heading {
+  font-family: var(--sans);
+  font-size: clamp(30px, 4.5vw, 50px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--white);
   text-align: center;
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: #111;
+  margin-bottom: 56px;
 }
 
-/* List layout */
-.certifications-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+.certifications-list { display: flex; flex-direction: column; }
 
-/* Each row */
 .cert-row {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   align-items: flex-start;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e6e6e6;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.2s, padding 0.2s;
 }
 
-.cert-row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
+.cert-row:first-child { border-top: 1px solid var(--rule); }
+.cert-row:last-child { border-bottom: none; }
+.cert-row:hover { background: var(--black-2); padding-left: 0.75rem; }
 
-/* Icon */
 .cert-icon {
-  font-size: 1.4rem;
-  color: #444;
-  margin-top: 4px;
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-top: 3px;
+  opacity: 0.65;
+  flex-shrink: 0;
 }
 
-/* Text content */
 .cert-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #222;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--white);
   margin-bottom: 4px;
+  letter-spacing: -0.02em;
 }
 
 .cert-platform {
-  font-size: 0.9rem;
+  font-family: var(--mono);
+  font-size: 10px;
   font-weight: 500;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.cert-desc {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.6;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white-3);
   margin-bottom: 10px;
 }
 
+.cert-desc {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--white-2);
+  line-height: 1.75;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
 .cert-link {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1a1a1a;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gold);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  transition: opacity 0.2s;
 }
 
-.cert-link:hover {
-  border-bottom: 1px solid #1a1a1a;
-}
+.cert-link:hover { opacity: 1; }
 
-/* Mobile */
 @media (max-width: 768px) {
-  .cert-row {
-    gap: 18px;
-  }
-
-  .achievements-heading {
-    font-size: 2rem;
-  }
+  .cert-row { gap: 16px; }
+  .achievements-heading { font-size: 2rem; margin-bottom: 40px; }
 }

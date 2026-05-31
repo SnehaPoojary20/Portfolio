@@ -4,11 +4,11 @@ import "./Skills.css";
 const skillSections = [
   {
     label: "Backend",
-    items: ["Python", "FastAPI", "Node.js", "Express.js", "REST API Design", "WebSockets", "Async Programming"],
+    items: ["Python", "FastAPI", "Node.js", "Express.js", "REST API Design", "Async Programming"],
   },
   {
     label: "AI / ML",
-    items: ["XGBoost", "Scikit-learn", "Pandas", "Feature Engineering", "AST Parsing", "Tree-sitter", "LLM Integration", "OpenAI API"],
+    items: ["XGBoost", "Scikit-learn", "Pandas", "Feature Engineering", "AST Parsing", "LLM Integration", "OpenAI API"],
   },
   {
     label: "Frontend",

@@ -1,16 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=My+Soul&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+MX+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
-
-body{
-  background-color:#FAFAD2;
-  margin: 0;
-  padding: 0;
-  color: black;
-   font-family: "Montserrat", sans-serif;
+:root {
+  --black:      #080808;
+  --black-2:    #0e0e0e;
+  --black-3:    #161616;
+  --black-4:    #1f1f1f;
+  --white:      #f5f1ea;
+  --white-2:    rgba(245,241,234,0.65);
+  --white-3:    rgba(245,241,234,0.35);
+  --white-4:    rgba(245,241,234,0.12);
+  --gold:       #c9a84c;
+  --gold-dim:   rgba(201,168,76,0.18);
+  --gold-faint: rgba(201,168,76,0.07);
+  --rule:       rgba(245,241,234,0.08);
+  --mono:       'JetBrains Mono', monospace;
+  --sans:       'DM Sans', sans-serif;
 }
 
-*{
-   background-color: #FAFAD2;
-   font-family: "Montserrat", sans-serif;
-   color:black;
-   } 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+* { background-color: unset; font-family: inherit; color: inherit; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  background-color: var(--black) !important;
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(201,168,76,0.22); color: var(--white); }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.25); }
+::-webkit-scrollbar-thumb:hover { background: rgba(201,168,76,0.5); }
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 6vw;
+  background: rgba(8,8,8,0.92);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar-logo {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover { color: var(--gold); }
+
+.navbar-cta {
+  padding: 7px 18px !important;
+  border: 1px solid rgba(201,168,76,0.4) !important;
+  color: var(--gold) !important;
+  border-radius: 1px;
+  transition: background 0.2s !important;
+}
+
+.navbar-cta:hover { background: var(--gold-dim) !important; }
+
+.footer {
+  padding: 1.5rem 6vw;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+}
+
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--white-3);
+  letter-spacing: 0.08em;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  opacity: 0.7;
+  letter-spacing: 0.06em;
+}
+
+.footer-dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: blink 2.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .navbar { padding: 1rem 5vw; }
+  .navbar-links { gap: 1.2rem; }
+  .navbar-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+  .footer { flex-direction: column; gap: 8px; text-align: center; }
+}

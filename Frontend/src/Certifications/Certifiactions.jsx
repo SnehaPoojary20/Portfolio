@@ -8,20 +8,20 @@ const certifications = [
     platform: "Apna College",
     link: "https://drive.google.com/file/d/1Hy3KsrzS1lPIXhAzmJN0dW3xONtBPnqr/view",
     description:
-      "Completed an in-depth DSA program covering core data structures, algorithms, and problem-solving techniques with strong emphasis on time and space complexity."
+      "In-depth DSA program covering core data structures, algorithms, and problem-solving with emphasis on time and space complexity analysis — directly aligned with MAANG interview standards."
   },
   {
     title: "Full Stack Web Development",
     platform: "Apna College",
     link: "https://drive.google.com/file/d/1Hy3KsrzS1lPIXhAzmJN0dW3xONtBPnqr/view",
     description:
-      "Completed a comprehensive full stack development course focused on building scalable MERN applications, RESTful APIs, and real-world project workflows."
+      "Comprehensive full-stack development course focused on building scalable MERN applications, RESTful API design, and real-world project delivery workflows."
   }
 ];
 
 const CertificationsComponent = () => {
   return (
-    <section className="achievements">
+    <section className="achievements" id="certifications">
       <h1 className="achievements-heading">Certifications</h1>
 
       <div className="certifications-list">

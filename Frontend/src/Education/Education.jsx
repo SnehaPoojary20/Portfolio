@@ -4,12 +4,11 @@ import "./Education.css";
 const educationData = [
   {
     degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
-    university: "Universal College of Engineering, Kaman",
+    university: "Universal College of Engineering, University of Mumbai",
     date: "Nov 2022 – May 2026",
-    cgpa: "7.0 / 10",
+    cgpa: "CGPA 8.09 (Sem 7)",
     coursework: [
-      "Data Structures",
-      "Algorithms",
+      "Data Structures & Algorithms",
       "Database Management Systems",
       "Operating Systems",
       "Computer Networks",
@@ -20,23 +19,24 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="education-section">
+    <section className="education-section" id="education">
       <h1 className="section-heading">Education</h1>
 
       {educationData.map((edu, index) => (
         <div key={index} className="education-item">
+          <div className="edu-meta">
+            <span className="edu-date">{edu.date}</span>
+            <span className="edu-cgpa">{edu.cgpa}</span>
+          </div>
           <h3 className="degree">{edu.degree}</h3>
           <p className="university">{edu.university}</p>
-          <p className="date-cgpa">
-            <span className="dates">{edu.date}</span> | <span className="cgpa">CGPA (Sem 7): 8.09</span>
-          </p>
           <div className="coursework">
-            <strong>Relevant Coursework:</strong>
-            <ul>
+            <span className="coursework-label">Relevant Coursework</span>
+            <div className="coursework-tags">
               {edu.coursework.map((course, i) => (
-                <li key={i}>{course}</li>
+                <span key={i} className="course-tag">{course}</span>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       ))}
