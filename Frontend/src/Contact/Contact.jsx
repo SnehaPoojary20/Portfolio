@@ -68,7 +68,7 @@ const Contact = () => {
           <FaFileAlt className='contact-icon'/>
           <h3>Resume</h3>
           <p>Full PDF available</p>
-          <a href='https://drive.google.com/drive/folders/1WUxGKpBbu02MUqZa72df_PDHrfpOgia4' target="_blank" rel="noopener noreferrer">Download PDF</a>
+          <a href='https://drive.google.com/file/d/14Fp81n0RizFtAAnNMCaXj0XMpWaQkti0/view?usp=sharing' target="_blank" rel="noopener noreferrer">Download PDF</a>
         </div>
       </div>
     </section>
