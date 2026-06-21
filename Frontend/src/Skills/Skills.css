@@ -8,10 +8,10 @@
 .section-eyebrow {
   font-family: var(--mono);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
-  opacity: 0.8;
   margin-bottom: 12px;
 }
 
@@ -27,7 +27,7 @@
 
 .title-dim {
   color: transparent;
-  -webkit-text-stroke: 1.2px rgba(245,241,234,0.2);
+  -webkit-text-stroke: 1.2px rgba(245,241,234,0.32);
 }
 
 .skills-grid {
@@ -52,13 +52,13 @@
 .skill-group-label {
   font-family: var(--mono);
   font-size: 10px;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
-  opacity: 0.7;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
 }
 
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -67,7 +67,7 @@
   font-family: var(--sans);
   font-size: 12.5px;
   color: var(--white-2);
-  font-weight: 300;
+  font-weight: 400;
   background: var(--black-3);
   border: 1px solid var(--rule);
   padding: 5px 11px;
@@ -75,8 +75,8 @@
 }
 
 .skill-group:hover .skill-tag {
-  color: rgba(245,241,234,0.75);
-  border-color: rgba(245,241,234,0.12);
+  color: var(--white);
+  border-color: rgba(245,241,234,0.2);
 }
 
 @media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr 1fr; } }

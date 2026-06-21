@@ -5,14 +5,18 @@
   --black-2:    #0e0e0e;
   --black-3:    #161616;
   --black-4:    #1f1f1f;
-  --white:      #f5f1ea;
-  --white-2:    rgba(245,241,234,0.65);
-  --white-3:    rgba(245,241,234,0.35);
-  --white-4:    rgba(245,241,234,0.12);
-  --gold:       #c9a84c;
-  --gold-dim:   rgba(201,168,76,0.18);
-  --gold-faint: rgba(201,168,76,0.07);
-  --rule:       rgba(245,241,234,0.08);
+
+  /* Two-color text system: white for all body/label/heading text, butter
+     yellow reserved only for highlighted keywords, links, and accents. */
+  --white:      #f5f1ea;   /* all text, everywhere — headings, body, labels, dates */
+  --white-2:    #f5f1ea;
+  --white-3:    #f5f1ea;
+
+  --gold:       #f2d680;   /* butter yellow — keyword highlights, links, accents only */
+  --gold-dim:   rgba(242,214,128,0.18);  /* decorative fills only, never text */
+  --gold-faint: rgba(242,214,128,0.07);  /* decorative fills only, never text */
+
+  --rule:       rgba(245,241,234,0.10);  /* hairline borders only */
   --mono:       'JetBrains Mono', monospace;
   --sans:       'DM Sans', sans-serif;
 }
@@ -26,17 +30,17 @@ body {
   background-color: var(--black) !important;
   color: var(--white);
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-::selection { background: rgba(201,168,76,0.22); color: var(--white); }
+::selection { background: rgba(242,214,128,0.25); color: var(--black); }
 
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--black); }
-::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.25); }
-::-webkit-scrollbar-thumb:hover { background: rgba(201,168,76,0.5); }
+::-webkit-scrollbar-thumb { background: rgba(242,214,128,0.3); }
+::-webkit-scrollbar-thumb:hover { background: rgba(242,214,128,0.55); }
 
 .navbar {
   position: fixed;
@@ -113,7 +117,6 @@ body {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--gold);
-  opacity: 0.7;
   letter-spacing: 0.06em;
 }
 
@@ -126,7 +129,7 @@ body {
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  50% { opacity: 0.3; }
 }
 
 /* ── MOBILE ── */

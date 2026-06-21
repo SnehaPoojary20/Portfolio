@@ -1,4 +1,3 @@
-/* ── CERTIFICATIONS ─────────────────────────────────── */
 .achievements {
   max-width: 1000px;
   margin: 0 auto;
@@ -35,7 +34,6 @@
   font-size: 1.2rem;
   color: var(--gold);
   margin-top: 3px;
-  opacity: 0.65;
   flex-shrink: 0;
 }
 
@@ -51,7 +49,7 @@
 .cert-platform {
   font-family: var(--mono);
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--white-3);
@@ -64,21 +62,20 @@
   color: var(--white-2);
   line-height: 1.75;
   margin-bottom: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .cert-link {
   font-family: var(--mono);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--gold);
   text-decoration: none;
   letter-spacing: 0.06em;
-  opacity: 0.75;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 
-.cert-link:hover { opacity: 1; }
+.cert-link:hover { color: #d4b05a; }
 
 @media (max-width: 768px) {
   .cert-row { gap: 16px; }
