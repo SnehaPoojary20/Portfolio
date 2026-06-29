@@ -1,6 +1,13 @@
 import React from 'react';
 import "./Contact.css";
-import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaFileAlt } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFileAlt,
+  FaCode
+} from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks, SiHashnode } from "react-icons/si";
 
 const Contact = () => {
@@ -43,6 +50,20 @@ const Contact = () => {
           <a href='https://leetcode.com/u/SnehaPoojary__/' target="_blank" rel="noopener noreferrer">200+ Solved</a>
         </div>
 
+        {/* HackerRank Card */}
+        <div className='contact-card'>
+          <FaCode className='contact-icon'/>
+          <h3>HackerRank</h3>
+          <p>snehapoojary2004</p>
+          <a
+            href='https://www.hackerrank.com/profile/snehapoojary2004'
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Profile
+          </a>
+        </div>
+
         <div className='contact-card'>
           <SiGeeksforgeeks className='contact-icon'/>
           <h3>GeeksForGeeks</h3>
@@ -68,7 +89,13 @@ const Contact = () => {
           <FaFileAlt className='contact-icon'/>
           <h3>Resume</h3>
           <p>Full PDF available</p>
-          <a href='https://drive.google.com/file/d/1MDpv56-c2mLQFC8RH_rawrehcyUIcP66/view?usp=sharing' target="_blank" rel="noopener noreferrer">Download PDF</a>
+          <a
+            href='https://drive.google.com/file/d/1MDpv56-c2mLQFC8RH_rawrehcyUIcP66/view?usp=sharing'
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download PDF
+          </a>
         </div>
       </div>
     </section>
