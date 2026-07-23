@@ -38,7 +38,7 @@ const Aboutme = () => {
 
           <div className="about-cta">
             <a href="mailto:snehapoojary2004@gmail.com" className="btn-primary">Hire Me</a>
-            <a href="https://drive.google.com/drive/folders/1WUxGKpBbu02MUqZa72df_PDHrfpOgia4"
+            <a href="https://drive.google.com/file/d/19CHkb1HVqLKDENXDXriFsLuS4kCQvTQz/view?usp=sharing"
                target="_blank" rel="noopener noreferrer" className="btn-ghost">
               View Resume ↗
             </a>
