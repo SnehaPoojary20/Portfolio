@@ -1,11 +1,9 @@
 .about {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 72px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 14vh 6vw 10vh;
+  position: relative;
+  z-index: 2;
   animation: fadeInUp 0.7s ease both;
 }
 
@@ -14,51 +12,57 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.image { flex-shrink: 0; display: flex; flex-direction: column; gap: 22px; }
-.image-wrapper { position: relative; }
-
-.profile-img {
-  width: 260px;
-  height: 330px;
-  object-fit: cover;
-  display: block;
-  border: 1px solid rgba(139,124,246,0.18);
-  filter: grayscale(15%) contrast(1.05);
-  transition: filter 0.4s, transform 0.4s;
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
 }
 
-.profile-img:hover { filter: grayscale(0%) contrast(1.05); transform: translateY(-4px); }
-
-.availability-badge {
-  position: absolute;
-  bottom: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--black);
-  border: 1px solid rgba(139,124,246,0.35);
-  color: var(--accent);
-  font-size: 11px;
-  font-family: var(--mono);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  padding: 6px 14px;
-  white-space: nowrap;
+.about-meta {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.status-pill {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  width: fit-content;
+  background: var(--black-2);
+  border: 1px solid rgba(139,124,246,0.3);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 7px 14px;
 }
 
 .badge-dot {
   width: 6px; height: 6px;
   background: var(--accent);
   border-radius: 50%;
-  flex-shrink: 0;
   animation: pulse 2.5s infinite;
 }
 
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-.description { max-width: 660px; padding-top: 8px; }
+.profile-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%) contrast(1.08);
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+  transition: filter 0.4s;
+}
+
+.profile-img:hover { filter: grayscale(0%) contrast(1.08); }
+
+.about-content { padding-top: 4px; }
 
 .about-eyebrow {
   font-family: var(--mono);
@@ -72,28 +76,36 @@
 
 .title {
   font-family: var(--sans);
-  font-size: clamp(44px, 6vw, 76px);
+  font-size: clamp(48px, 7vw, 88px);
   font-weight: 600;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
   color: var(--text);
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .bio {
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.85;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   font-weight: 400;
+  max-width: 620px;
 }
 
-.about-cta { display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+.bio-question {
+  padding-left: 20px;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+.about-cta { display: flex; gap: 14px; margin-top: 40px; flex-wrap: wrap; }
 
 .btn-primary {
   display: inline-block;
-  padding: 11px 28px;
+  padding: 12px 30px;
   background: var(--accent);
   color: var(--black);
   font-family: var(--mono);
@@ -109,7 +121,7 @@
 
 .btn-ghost {
   display: inline-block;
-  padding: 11px 28px;
+  padding: 12px 30px;
   border: 1px solid rgba(236,233,228,0.25);
   color: var(--text);
   font-family: var(--mono);
@@ -124,9 +136,11 @@
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
 @media (max-width: 900px) {
-  .about { flex-direction: column; align-items: center; gap: 48px; padding: 12vh 5vw 6vh; }
-  .description { text-align: center; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-meta { position: static; align-items: center; }
+  .profile-img { max-width: 240px; margin: 0 auto; }
+  .about-content { text-align: center; }
+  .bio { margin-left: auto; margin-right: auto; }
+  .bio-question { border-left: none; border-top: 2px solid var(--accent); padding-left: 0; padding-top: 16px; }
   .about-cta { justify-content: center; }
-  .profile-img { width: 220px; height: 280px; }
 }
-
