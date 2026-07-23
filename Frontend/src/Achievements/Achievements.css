@@ -1,92 +1,39 @@
-.achievements-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10vh 6vw;
-  border-top: 1px solid var(--rule);
-}
+.achievements-section { max-width: 1000px; margin: 0 auto; padding: 10vh 6vw; border-top: 1px solid var(--rule); }
 
 .section-heading {
-  font-family: var(--sans);
-  font-size: clamp(30px, 4.5vw, 50px);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 56px;
-  text-align: center;
+  font-family: var(--sans); font-size: clamp(30px, 4.5vw, 50px);
+  font-weight: 600; letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 56px; text-align: center;
 }
 
 .achievements-category { margin-bottom: 48px; }
 
 .category-heading {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 28px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 28px; padding-bottom: 12px; border-bottom: 1px solid rgba(139,124,246,0.15);
 }
 
-.achievement-item {
-  margin-bottom: 32px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--rule);
-}
-
+.achievement-item { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--rule); }
 .achievement-item:last-child { border-bottom: none; }
 
-.achievement-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.achievement-title {
-  font-family: var(--sans);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: -0.02em;
-}
-
-.achievement-date {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--white-3);
-  letter-spacing: 0.08em;
-}
+.achievement-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; flex-wrap: wrap; gap: 6px; }
+.achievement-title { font-family: var(--sans); font-size: 17px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
+.achievement-date { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--text-dim); letter-spacing: 0.08em; }
 
 .achievement-points { padding-left: 0; margin: 0; list-style: none; }
 
 .achievement-points li {
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--white-2);
-  line-height: 1.8;
-  margin-bottom: 8px;
-  padding-left: 18px;
-  position: relative;
-  font-weight: 400;
+  font-family: var(--sans); font-size: 14px; color: var(--text);
+  line-height: 1.8; margin-bottom: 8px; padding-left: 18px; position: relative; font-weight: 400;
 }
 
 .achievement-points li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: 12px;
-  top: 1px;
-  font-family: var(--mono);
+  content: '—'; position: absolute; left: 0; color: var(--accent);
+  font-size: 12px; top: 1px; font-family: var(--mono);
 }
 
 @media (max-width: 768px) {
   .section-heading { font-size: 2rem; margin-bottom: 40px; }
   .achievement-header { flex-direction: column; }
 }
-

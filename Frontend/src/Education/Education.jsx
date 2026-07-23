@@ -6,7 +6,7 @@ const educationData = [
     degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
     university: "Universal College of Engineering, University of Mumbai",
     date: "Nov 2022 – May 2026",
-    cgpa: "CGPA 8.09 (Sem 7)",
+    cgpa: "CGPA 7.21/10",
     coursework: [
       "Data Structures & Algorithms",
       "Database Management Systems",
@@ -21,7 +21,6 @@ const Education = () => {
   return (
     <section className="education-section" id="education">
       <h1 className="section-heading">Education</h1>
-
       {educationData.map((edu, index) => (
         <div key={index} className="education-item">
           <div className="edu-meta">
@@ -33,9 +32,7 @@ const Education = () => {
           <div className="coursework">
             <span className="coursework-label">Relevant Coursework</span>
             <div className="coursework-tags">
-              {edu.coursework.map((course, i) => (
-                <span key={i} className="course-tag">{course}</span>
-              ))}
+              {edu.coursework.map((course, i) => <span key={i} className="course-tag">{course}</span>)}
             </div>
           </div>
         </div>
