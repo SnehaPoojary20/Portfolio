@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
 :root {
-  --black:      #080808;
-  --black-2:    #0e0e0e;
-  --black-3:    #161616;
-  --black-4:    #1f1f1f;
+  --black:      #08080b;
+  --black-2:    #0e0e12;
+  --black-3:    #151519;
+  --black-4:    #1c1c21;
 
-  /* Two-color text system: white for all body/label/heading text, butter
-     yellow reserved only for highlighted keywords, links, and accents. */
-  --white:      #f5f1ea;   /* all text, everywhere — headings, body, labels, dates */
-  --white-2:    #f5f1ea;
-  --white-3:    #f5f1ea;
+  /* Single-color text system: warm off-white for ALL body/heading/label text.
+     Accent is reserved ONLY for standalone elements — eyebrows, links, tags,
+     badges — never mixed with body text inside the same sentence or line. */
+  --text:       #ece9e4;
+  --text-dim:   #8a8a92;   /* secondary/meta text — dates, captions — used alone, never inline-mixed with --text */
 
-  --gold:       #f2d680;   /* butter yellow — keyword highlights, links, accents only */
-  --gold-dim:   rgba(242,214,128,0.18);  /* decorative fills only, never text */
-  --gold-faint: rgba(242,214,128,0.07);  /* decorative fills only, never text */
+  --accent:     #8b7cf6;   /* single accent: violet. Labels, links, tags, badges only. */
+  --accent-dim: rgba(139,124,246,0.14);
+  --accent-faint: rgba(139,124,246,0.06);
 
-  --rule:       rgba(245,241,234,0.10);  /* hairline borders only */
+  --rule:       rgba(236,233,228,0.09);
   --mono:       'JetBrains Mono', monospace;
   --sans:       'DM Sans', sans-serif;
 }
@@ -28,19 +28,19 @@ html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
 body {
   background-color: var(--black) !important;
-  color: var(--white);
+  color: var(--text);
   font-family: var(--sans);
   font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-::selection { background: rgba(242,214,128,0.25); color: var(--black); }
+::selection { background: rgba(139,124,246,0.28); color: var(--black); }
 
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--black); }
-::-webkit-scrollbar-thumb { background: rgba(242,214,128,0.3); }
-::-webkit-scrollbar-thumb:hover { background: rgba(242,214,128,0.55); }
+::-webkit-scrollbar-thumb { background: rgba(139,124,246,0.35); }
+::-webkit-scrollbar-thumb:hover { background: rgba(139,124,246,0.6); }
 
 .navbar {
   position: fixed;
@@ -50,7 +50,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1.1rem 6vw;
-  background: rgba(8,8,8,0.92);
+  background: rgba(8,8,11,0.92);
   border-bottom: 1px solid var(--rule);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -60,7 +60,7 @@ body {
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.1em;
-  color: var(--gold);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
@@ -77,22 +77,22 @@ body {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--white-3);
+  color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.navbar-links a:hover { color: var(--gold); }
+.navbar-links a:hover { color: var(--accent); }
 
 .navbar-cta {
   padding: 7px 18px !important;
-  border: 1px solid rgba(201,168,76,0.4) !important;
-  color: var(--gold) !important;
-  border-radius: 1px;
+  border: 1px solid rgba(139,124,246,0.4) !important;
+  color: var(--accent) !important;
+  border-radius: 2px;
   transition: background 0.2s !important;
 }
 
-.navbar-cta:hover { background: var(--gold-dim) !important; }
+.navbar-cta:hover { background: var(--accent-dim) !important; }
 
 .footer {
   padding: 1.5rem 6vw;
@@ -106,7 +106,7 @@ body {
 .footer-copy {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--white-3);
+  color: var(--text-dim);
   letter-spacing: 0.08em;
 }
 
@@ -116,13 +116,13 @@ body {
   gap: 8px;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--gold);
+  color: var(--accent);
   letter-spacing: 0.06em;
 }
 
 .footer-dot {
   width: 6px; height: 6px;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 50%;
   animation: blink 2.5s infinite;
 }
@@ -132,7 +132,6 @@ body {
   50% { opacity: 0.3; }
 }
 
-/* ── MOBILE ── */
 @media (max-width: 768px) {
   .navbar { padding: 1rem 5vw; }
   .navbar-links { gap: 1.2rem; }
