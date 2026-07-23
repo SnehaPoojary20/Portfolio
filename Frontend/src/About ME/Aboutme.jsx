@@ -7,10 +7,10 @@ const Aboutme = () => {
       <div className="about-grid">
         <div className="about-meta">
           <span className="section-index">— HELLO</span>
-          <div className="status-pill">
+          {/* <div className="status-pill">
             <span className="badge-dot" />
             Open to SDE I · May 2026
-          </div>
+          </div> */}
           <img className="profile-img" src="/Sneha.jpeg" alt="Sneha Poojary" />
         </div>
 
