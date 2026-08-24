@@ -20,7 +20,7 @@ const Aboutme = () => {
 
           <p className="bio">
             I'm a backend-focused Software Engineer finishing my B.E. in Computer Engineering
-            at the University of Mumbai (May 2026, CGPA 7.21). I build REST APIs, ML pipelines,
+            at the University of Mumbai (May 2026). I build REST APIs, ML pipelines,
             and AI-powered developer tools using Python, FastAPI, Node.js, and React.js.
           </p>
 
