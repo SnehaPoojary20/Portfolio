@@ -1,26 +1,22 @@
 .education-section { max-width: 1000px; margin: 0 auto; padding: 10vh 6vw; border-top: 1px solid var(--rule); }
 
-.section-heading {
-  font-family: var(--sans);
-  font-size: clamp(30px, 4.5vw, 50px);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 56px;
-  text-align: center;
+.section-title {
+  font-family: var(--sans); font-size: clamp(30px, 4.5vw, 50px);
+  font-weight: 700; letter-spacing: -0.03em; color: var(--text);
+  margin: 0 0 56px; text-align: center;
 }
 
 .education-item { padding: 2.5rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .edu-meta { display: flex; align-items: center; gap: 18px; margin-bottom: 12px; }
-.edu-date { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--text-dim); letter-spacing: 0.08em; }
-.edu-cgpa { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; }
+.edu-date { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--text-dim); letter-spacing: 0.05em; }
+.edu-cgpa { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
 
-.degree { font-family: var(--sans); font-size: 19px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; margin-bottom: 4px; }
-.university { font-family: var(--sans); font-size: 13.5px; color: var(--text-dim); margin-bottom: 22px; font-weight: 400; }
+.degree { font-family: var(--sans); font-size: 19px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; margin: 0 0 4px; }
+.university { font-family: var(--sans); font-size: 13.5px; color: var(--text-dim); margin: 0 0 22px; font-weight: 400; }
 
 .coursework-label {
   font-family: var(--mono); font-size: 10px; font-weight: 600;
-  letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim);
   display: block; margin-bottom: 12px;
 }
 
@@ -33,9 +29,9 @@
   transition: border-color 0.2s;
 }
 
-.course-tag:hover { border-color: rgba(139,124,246,0.35); }
+.course-tag:hover { border-color: var(--accent-dim); }
 
 @media (max-width: 768px) {
-  .section-heading { font-size: 2rem; margin-bottom: 40px; }
+  .section-title { font-size: 2rem; margin-bottom: 40px; }
   .edu-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
 }

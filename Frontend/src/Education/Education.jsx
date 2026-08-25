@@ -1,4 +1,3 @@
-import React from "react";
 import "./Education.css";
 
 const educationData = [
@@ -20,7 +19,8 @@ const educationData = [
 const Education = () => {
   return (
     <section className="education-section" id="education">
-      <h1 className="section-heading">Education</h1>
+      <span className="prompt-eyebrow" style={{ justifyContent: "center" }}>cat ./education.log</span>
+      <h2 className="section-title">Education</h2>
       {educationData.map((edu, index) => (
         <div key={index} className="education-item">
           <div className="edu-meta">

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Certifications.css";
 import { FaCertificate } from "react-icons/fa";
 
@@ -20,7 +19,8 @@ const certifications = [
 const CertificationsComponent = () => {
   return (
     <section className="achievements" id="certifications">
-      <h1 className="achievements-heading">Certifications</h1>
+      <span className="prompt-eyebrow" style={{ justifyContent: "center" }}>ls ./certifications</span>
+      <h2 className="achievements-heading">Certifications</h2>
       <div className="certifications-list">
         {certifications.map((cert, index) => (
           <div key={index} className="cert-row">

@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Skills.css";
 
 const skillSections = [
-  { label: "Backend", items: ["Python", "FastAPI", "Node.js", "Express.js", "REST API Design", "Async Programming"] },
-  { label: "AI / ML", items: ["Google Gemini API", "XGBoost", "Pandas", "Feature Engineering", "AST Parsing", "LLM Integration"] },
-  { label: "Frontend", items: ["React.js", "HTML", "CSS"] },
-  { label: "Databases", items: ["PostgreSQL", "MongoDB", "SQL", "MongoDB Indexing"] },
-  { label: "Infra & Tools", items: ["Docker", "Git", "Railway", "Vercel", "Render"] },
-  { label: "CS Fundamentals", items: ["Data Structures & Algorithms", "System Design", "OOP", "Operating Systems", "DBMS", "Computer Networks"] },
+  { label: "Backend", items: ["Python", "FastAPI", "Node.js", "Express.js", "REST API Design", "Async Programming", "JWT Authentication"] },
+  { label: "AI / ML", items: ["Google Gemini API", "XGBoost", "LLM Integration", "AST Parsing", "Pydantic v2"] },
+  { label: "Databases", items: ["PostgreSQL", "MongoDB", "SQL"] },
+  { label: "Frontend", items: ["React.js", "Tailwind CSS"] },
+  { label: "Infra & Tools", items: ["Docker", "Git", "GitHub Actions", "pytest", "Render", "Vercel"] },
+  { label: "CS Fundamentals", items: ["Data Structures & Algorithms", "DBMS", "Operating Systems", "Computer Networks", "OOP"] },
 ];
 
 const Skills = () => {
@@ -25,7 +25,7 @@ const Skills = () => {
   return (
     <section className="skills-section" id="skills" ref={ref}>
       <div className="skills-inner">
-        <p className="section-eyebrow">Technical Stack</p>
+        <span className="prompt-eyebrow">cat ./skills.json</span>
         <h2 className="section-title">Skills &amp; Tools</h2>
         <div className="skills-grid">
           {skillSections.map((group, i) => (

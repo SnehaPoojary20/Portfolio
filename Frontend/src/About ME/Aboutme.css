@@ -33,16 +33,18 @@
   gap: 8px;
   width: fit-content;
   background: var(--black-2);
-  border: 1px solid rgba(139,124,246,0.3);
+  border: 1px solid var(--accent-dim);
   color: var(--accent);
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   padding: 7px 14px;
+  line-height: 1.4;
 }
 
 .badge-dot {
   width: 6px; height: 6px;
+  flex-shrink: 0;
   background: var(--accent);
   border-radius: 50%;
   animation: pulse 2.5s infinite;
@@ -64,24 +66,23 @@
 
 .about-content { padding-top: 4px; }
 
-.about-eyebrow {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
 .title {
   font-family: var(--sans);
   font-size: clamp(48px, 7vw, 88px);
-  font-weight: 600;
-  line-height: 0.92;
+  font-weight: 700;
+  line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--text);
-  margin-bottom: 36px;
+  margin: 0 0 14px;
+}
+
+.about-role {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text-dim);
+  margin: 0 0 36px;
 }
 
 .bio {
@@ -97,7 +98,6 @@
 .bio-question {
   padding-left: 20px;
   border-left: 2px solid var(--accent);
-  font-style: italic;
   color: var(--text-dim);
 }
 
@@ -117,7 +117,7 @@
   transition: background 0.2s, transform 0.15s;
 }
 
-.btn-primary:hover { background: #a396ff; transform: translateY(-2px); }
+.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); }
 
 .btn-ghost {
   display: inline-block;

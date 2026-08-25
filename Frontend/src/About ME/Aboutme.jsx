@@ -1,4 +1,3 @@
-import React from "react";
 import "./Aboutme.css";
 
 const Aboutme = () => {
@@ -6,40 +5,48 @@ const Aboutme = () => {
     <section className="about" id="about">
       <div className="about-grid">
         <div className="about-meta">
-          <span className="section-index">— HELLO</span>
-          {/* <div className="status-pill">
+          <span className="prompt-eyebrow">whoami</span>
+          <div className="status-pill">
             <span className="badge-dot" />
-            Open to SDE I · May 2026
-          </div> */}
+            Open to Work · SDE-1 / Backend / AI Eng · May 2026
+          </div>
           <img className="profile-img" src="/Sneha.jpeg" alt="Sneha Poojary" />
         </div>
 
         <div className="about-content">
-          <p className="about-eyebrow">Backend Engineer · AI Integration · Systems Thinker</p>
-          <h1 className="title">Sneha Poojary</h1>
+          <h1 className="title">
+            Sneha Poojary<span className="prompt-cursor" />
+          </h1>
+          <p className="about-role">Backend Software Engineer — Python · Node.js · LLM Integration</p>
 
           <p className="bio">
-            I'm a backend-focused Software Engineer finishing my B.E. in Computer Engineering
-            at the University of Mumbai (May 2026). I build REST APIs, ML pipelines,
-            and AI-powered developer tools using Python, FastAPI, Node.js, and React.js.
+            I build backend systems that hold up outside the demo — and I like the
+            part of engineering most people skip past: figuring out why something
+            breaks before it does.
           </p>
 
           <p className="bio">
-            Recent work: applied MongoDB compound indexing to speed up query performance,
-            trained an XGBoost classifier to rank GitHub files by bug-proneness, and built a
-            live AST-based code explanation tool integrated with the Gemini API — deployed
-            end-to-end on Render and Vercel.
+            Give me a problem and I'll take it apart until I understand every
+            piece — where the data lives, what happens when a dependency fails,
+            what breaks first under load. I'd rather spend an extra hour on the
+            failure case than ship something that only works when everything
+            goes right.
           </p>
 
           <p className="bio bio-question">
-            How does this fail at scale? — the question behind every schema, every service
-            boundary, every container decision I make.
+            I pick things up fast because I have to — most of what I know about
+            backend systems, I taught myself by building and breaking things,
+            not by being told the "right" way first.
           </p>
 
           <div className="about-cta">
             <a href="mailto:snehapoojary2004@gmail.com" className="btn-primary">Hire Me</a>
-            <a href="https://drive.google.com/file/d/19CHkb1HVqLKDENXDXriFsLuS4kCQvTQz/view?usp=sharing"
-               target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a
+              href="https://drive.google.com/file/d/19CHkb1HVqLKDENXDXriFsLuS4kCQvTQz/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost"
+            >
               View Resume ↗
             </a>
           </div>

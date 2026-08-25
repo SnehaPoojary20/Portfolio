@@ -1,60 +1,59 @@
-import React from "react";
 import "./Projects.css";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
-    title: "NibbleNote",
+    title: "Explain My Code",
     badge: "Live",
-    tagline: "MERN stack · MongoDB compound indexing · REST APIs",
+    tagline: "AST pre-processing · Gemini API · Graceful degradation",
     description: [
-      "Architected a full-stack restaurant discovery platform using the MERN stack with location-based search, reviews, and image posts.",
-      "Built modular REST APIs via Node.js and Express.js with controller-service separation across users, reviews, posts, and location domains.",
-      "Applied MongoDB compound indexing and geospatial ranking ($near, 2dsphere) to keep the primary discovery feed query fast as data grows.",
-      "Implemented stateless JWT authentication middleware at the route level, avoiding server-side session storage for horizontal scalability.",
-      "Shipped continuous delivery from GitHub to Vercel/Render."
+      "Built an AI-powered code analysis tool that structurally pre-processes source with Python's AST module — parsing FunctionDef/AsyncFunctionDef nodes for parameters, docstrings, and metadata — before it ever reaches an LLM, cutting prompt ambiguity.",
+      "Orchestrated Gemini API calls asynchronously via httpx (30s timeout, prompt-injection guard) and validated every response against strictly typed Pydantic v2 schemas.",
+      "Built graceful degradation into the LLM layer: on API-key, timeout, or rate-limit failure, the service falls back to an AST-only structural summary instead of erroring out.",
+      "Migrated from the OpenAI API to Google Gemini's OpenAI-compatible endpoint after hitting OpenAI quota limits.",
+      "Deployed frontend on Vercel, backend on Render."
     ],
-    tech: ["Node.js", "Express.js", "React.js", "MongoDB", "JWT", "REST APIs", "Vercel", "Render"],
-    github: "https://github.com/SnehaPoojary20/NibbleNote",
-    live: "https://nibble-note.vercel.app"
+    tech: ["Python", "FastAPI", "React.js", "Python AST", "Google Gemini API", "Pydantic v2", "httpx", "Vercel", "Render"],
+    github: "https://github.com/SnehaPoojary20/Explain-My-Code",
+    live: "https://explain-my-code-two.vercel.app/"
   },
   {
     title: "Silent Bug Predictor",
     badge: "Live",
-    tagline: "AST analysis · XGBoost · End-to-end ML pipeline",
+    tagline: "AST features · XGBoost · GitHub commit history",
     description: [
-      "Built an end-to-end ML pipeline that analyzes GitHub repositories and ranks files by bug-proneness.",
-      "Combined AST-derived code-complexity metrics (LOC, function count, cyclomatic complexity) with commit-history signals pulled via the GitHub REST API.",
-      "Trained an XGBoost binary classifier over logistic regression to capture interaction effects between code complexity and contributor activity.",
-      "Designed a FastAPI backend with clear separation between feature-extraction, GitHub-integration, and inference layers, exposing a POST /analyze endpoint.",
-      "Deployed on Render with a Dockerized build for reproducibility."
+      "Built a FastAPI service that scores Python files for bug risk; persisted every analysis to PostgreSQL via async SQLAlchemy instead of returning stateless one-off output, enabling historical lookups.",
+      "Extracted structural signals (LOC, function count, cyclomatic complexity) via Python AST parsing over regex, combined with GitHub REST API commit-history features, handling 404/403/timeout responses explicitly for pipeline resilience.",
+      "Trained an XGBoost binary classifier on the combined features to produce a per-file bug-risk score.",
+      "Secured all endpoints with per-user JWT auth (bcrypt-hashed passwords) and per-IP rate limiting.",
+      "8-case pytest suite (all passing) covering AST edge cases, run automatically on every push via GitHub Actions CI; containerized with Docker, deployed on Render."
     ],
-    tech: ["Python", "FastAPI", "XGBoost", "Pandas", "PostgreSQL", "Docker", "GitHub API"],
+    tech: ["FastAPI", "XGBoost", "PostgreSQL", "GitHub REST API", "Python AST", "JWT", "pytest", "Docker", "Render"],
     github: "https://github.com/SnehaPoojary20/Silent-Bug-Predictor",
     live: "https://silent-bug-predictor.vercel.app"
   },
   {
-    title: "Explain My Code",
+    title: "NibbleNote",
     badge: "Live",
-    tagline: "AST · Google Gemini API · Deployed",
+    tagline: "MERN · Weighted search ranking · LLM review summaries",
     description: [
-      "Built an AI-powered code analysis tool using Python's AST module to extract function names, arguments, line numbers, and docstrings without executing code.",
-      "Integrated the Gemini API via asynchronous httpx calls, passing structured AST-extracted context alongside raw code for accurate, function-level explanations.",
-      "Built a modular FastAPI backend with service-layer separation (ast_service, llm_service) and Pydantic request/response validation.",
-      "Built a React.js frontend with a live code editor and structured per-function results display.",
-      "Deployed backend on Railway and frontend on Vercel."
+      "Engineered a full-stack MERN discovery platform for restaurant and café reviews, with a weighted-relevance search endpoint ranking prefix matches above substring matches via MongoDB's aggregation pipeline (top-8 results, paginated).",
+      "Denormalized avgRating/totalReviews onto the Restaurant document, recalculated on every review write, to avoid a join with the reviews collection on every read.",
+      "Structured the Express.js REST API with access + refresh token JWT authentication (httpOnly, secure cookies) and a dedicated refresh endpoint; enforced duplicate-location prevention via a unique compound index.",
+      "Built an LLM-powered review summarizer (\"vibe check\") called via Axios, backed by a 24-hour in-memory cache with automatic invalidation on review create/update/delete."
     ],
-    tech: ["Python", "FastAPI", "AST", "Google Gemini API", "httpx", "React.js", "Railway", "Vercel"],
-    github: "https://github.com/SnehaPoojary20/Explain-My-Code",
-    live: "https://explain-my-code-two.vercel.app/"
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Axios", "LLM API", "Tailwind CSS", "Vercel", "Render"],
+    github: "https://github.com/SnehaPoojary20/NibbleNote",
+    live: "https://nibble-note.vercel.app"
   }
 ];
 
 const Projects = () => {
   return (
     <section className="projects-section" id="projects">
-      <h1 className="projects-heading">Selected Projects</h1>
+      <span className="prompt-eyebrow" style={{ justifyContent: "center" }}>git log --oneline ./projects</span>
+      <h2 className="section-title">Selected Projects</h2>
       <div className="projects-list">
         {projects.map((project, index) => (
           <div key={index} className={`project-item ${index % 2 === 0 ? "align-left" : "align-right"}`}>
@@ -64,12 +63,12 @@ const Projects = () => {
                   <h3 className="project-title">{project.title}</h3>
                   {project.badge && <span className="project-badge">{project.badge}</span>}
                 </div>
-                <div className="project-links-group" style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="GitHub source">
+                <div className="project-links-group">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={`${project.title} GitHub source`}>
                     <FaGithub size={20} />
                   </a>
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link live-link" aria-label="Live deployment">
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link live-link" aria-label={`${project.title} live deployment`}>
                       <FiExternalLink size={20} />
                     </a>
                   )}
