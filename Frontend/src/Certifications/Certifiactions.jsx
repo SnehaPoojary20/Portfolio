@@ -1,44 +1,43 @@
 import "./Certifications.css";
-import { FaCertificate } from "react-icons/fa";
 
-const certifications = [
+
+const certificates = [
   {
-    title: "Data Structures & Algorithms",
-    platform: "Apna College",
-    link: "https://drive.google.com/file/d/1Hy3KsrzS1lPIXhAzmJN0dW3xONtBPnqr/view",
-    description: "In-depth DSA program covering core data structures, algorithms, and problem-solving with emphasis on time and space complexity analysis."
+    title: "Alpha: DSA with Java",
+    img: "certificates/Sneha(DSA).jpg",
+    alt: "Alpha DSA with Java certificate from Apna College",
+    text: "This course built my foundation in data structures and algorithms using Java. I learnt to work with arrays, strings, recursion, linked lists, stacks, queues, trees, graphs and dynamic programming, along with sorting, searching and backtracking techniques. More importantly, it taught me how to analyse time and space complexity and break a problem down into a clean, efficient solution, which I have since practised regularly on coding platforms.",
   },
   {
-    title: "Full Stack Web Development",
-    platform: "Apna College",
-    link: "https://drive.google.com/file/d/1Hy3KsrzS1lPIXhAzmJN0dW3xONtBPnqr/view",
-    description: "Comprehensive full-stack development course focused on building scalable MERN applications, RESTful API design, and real-world project delivery workflows."
-  }
+    title: "Delta: Full Stack Web Development (MERN)",
+    img: "/certificates/Web Dev.png",
+    alt: "Delta Full Stack Web Development certificate from Apna College",
+    text: "This course covered the complete MERN stack. I learnt HTML, CSS and JavaScript fundamentals, then built dynamic interfaces with React.js. On the backend, I learnt to create servers and REST APIs with Node.js and Express.js, and to store and query data using MongoDB. It taught me how the frontend, backend and database connect to form a complete web application, and I applied this in my own full-stack projects.",
+  },
 ];
 
-const CertificationsComponent = () => {
+export default function Certifications() {
   return (
-    <section className="achievements" id="certifications">
-      <span className="prompt-eyebrow" style={{ justifyContent: "center" }}>ls ./certifications</span>
-      <h2 className="achievements-heading">Certifications</h2>
-      <div className="certifications-list">
-        {certifications.map((cert, index) => (
-          <div key={index} className="cert-row">
-            <div className="cert-left"><FaCertificate className="cert-icon" /></div>
-            <div className="cert-right">
-              <h3 className="cert-title">{cert.title}</h3>
-              <p className="cert-platform">{cert.platform}</p>
-              <p className="cert-desc">{cert.description}</p>
-              <a href={cert.link} target="_blank" rel="noopener noreferrer" className="cert-link">View Certificate →</a>
+    <section className="cert-section">
+      <div className="cert-container">
+        <h2 className="cert-heading">Certifications</h2>
+
+        {certificates.map((c) => (
+          <div className="cert-row" key={c.title}>
+            <div className="cert-image-wrapper">
+              <img src={c.img} alt={c.alt} className="cert-image" />
+            </div>
+
+            <div className="cert-content">
+              <h3 className="cert-title">{c.title}</h3>
+              <p className="cert-text">{c.text}</p>
             </div>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default CertificationsComponent;
+}
 
 
 

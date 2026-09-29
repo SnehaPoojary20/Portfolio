@@ -1,146 +1,85 @@
-.about {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14vh 6vw 10vh;
-  position: relative;
-  z-index: 2;
-  animation: fadeInUp 0.7s ease both;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.about-meta {
+.about-section {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: sticky;
-  top: 100px;
-}
-
-.status-pill {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  width: fit-content;
-  background: var(--black-2);
-  border: 1px solid var(--accent-dim);
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.02em;
-  padding: 7px 14px;
-  line-height: 1.4;
+  justify-content: center;
+  padding: 120px 20px 60px; /* top space keeps it clear of the fixed navbar */
+  box-sizing: border-box;
 }
 
-.badge-dot {
-  width: 6px; height: 6px;
+.about-container {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.about-image-wrapper {
   flex-shrink: 0;
-  background: var(--accent);
-  border-radius: 50%;
-  animation: pulse 2.5s infinite;
 }
 
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-.profile-img {
-  width: 100%;
-  aspect-ratio: 4/5;
+.about-image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
   object-fit: cover;
   display: block;
-  filter: grayscale(30%) contrast(1.08);
-  clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
-  transition: filter 0.4s;
 }
 
-.profile-img:hover { filter: grayscale(0%) contrast(1.08); }
-
-.about-content { padding-top: 4px; }
-
-.title {
-  font-family: var(--sans);
-  font-size: clamp(48px, 7vw, 88px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  color: var(--text);
-  margin: 0 0 14px;
+.about-text {
+  flex: 1;
+  margin: 0;
+  color: #000000;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: left;
 }
 
-.about-role {
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--text-dim);
-  margin: 0 0 36px;
-}
-
-.bio {
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.85;
-  color: var(--text);
-  margin-bottom: 18px;
-  font-weight: 400;
-  max-width: 620px;
-}
-
-.bio-question {
-  padding-left: 20px;
-  border-left: 2px solid var(--accent);
-  color: var(--text-dim);
-}
-
-.about-cta { display: flex; gap: 14px; margin-top: 40px; flex-wrap: wrap; }
-
-.btn-primary {
-  display: inline-block;
-  padding: 12px 30px;
-  background: var(--accent);
-  color: var(--black);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); }
-
-.btn-ghost {
-  display: inline-block;
-  padding: 12px 30px;
-  border: 1px solid rgba(236,233,228,0.25);
-  color: var(--text);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s, transform 0.15s;
-}
-
-.btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-
+/* tablet */
 @media (max-width: 900px) {
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-meta { position: static; align-items: center; }
-  .profile-img { max-width: 240px; margin: 0 auto; }
-  .about-content { text-align: center; }
-  .bio { margin-left: auto; margin-right: auto; }
-  .bio-question { border-left: none; border-top: 2px solid var(--accent); padding-left: 0; padding-top: 16px; }
-  .about-cta { justify-content: center; }
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* mobile: image on top, paragraph below */
+@media (max-width: 700px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text {
+  margin: 0;
+  color: #000000;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: left;
+}
+
+  .about-text-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 }

@@ -1,74 +1,127 @@
+import { useState } from "react";
 import "./Contact.css";
-import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaFileAlt, FaCode } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks, SiHashnode } from "react-icons/si";
 
-const Contact = () => {
+const FORMSPREE_URL = "https://formspree.io/f/xnpnlzyk";
+
+export default function Contact() {
+  const [form, setForm] = useState({ name: "", subject: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(e.target),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
-    <section className="contact" id="contact">
-      <span className="prompt-eyebrow" style={{ justifyContent: "center" }}>./contact.sh</span>
-      <h2 className="contact-heading">Let's build something that ships.</h2>
-      <p className="contact-sub">Seeking SDE-1 / Backend / AI Engineer roles · Mumbai · Pune · Bengaluru · Remote · Available May 2026</p>
+    <section className="contact-section">
+      <div className="contact-container">
+        <h2 className="contact-heading">Contact</h2>
 
-      <div className="contact-cards">
-        <a className="contact-card" href="mailto:snehapoojary2004@gmail.com">
-          <FaEnvelope className="contact-icon" />
-          <h3>Email</h3>
-          <p>snehapoojary2004@gmail.com</p>
-          <span className="contact-open">Email Me</span>
-        </a>
-        <a className="contact-card" href="https://www.linkedin.com/in/snehapoojary/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="contact-icon" />
-          <h3>LinkedIn</h3>
-          <p>in/snehapoojary</p>
-          <span className="contact-open">Connect</span>
-        </a>
-        <a className="contact-card" href="https://github.com/SnehaPoojary20" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="contact-icon" />
-          <h3>GitHub</h3>
-          <p>SnehaPoojary20</p>
-          <span className="contact-open">View Repos</span>
-        </a>
-        <a className="contact-card" href="https://leetcode.com/u/SnehaPoojary__/" target="_blank" rel="noopener noreferrer">
-          <SiLeetcode className="contact-icon" />
-          <h3>LeetCode</h3>
-          <p>SnehaPoojary__</p>
-          <span className="contact-open">240+ Solved</span>
-        </a>
-        <a className="contact-card" href="https://www.hackerrank.com/profile/snehapoojary2004" target="_blank" rel="noopener noreferrer">
-          <FaCode className="contact-icon" />
-          <h3>HackerRank</h3>
-          <p>snehapoojary2004</p>
-          <span className="contact-open">View Profile</span>
-        </a>
-        <a className="contact-card" href="https://www.geeksforgeeks.org/profile/snehapoojary?tab=activity" target="_blank" rel="noopener noreferrer">
-          <SiGeeksforgeeks className="contact-icon" />
-          <h3>GeeksforGeeks</h3>
-          <p>snehapoojary</p>
-          <span className="contact-open">View Profile</span>
-        </a>
-        <a className="contact-card" href="https://hashnode.com/@snehapoojary" target="_blank" rel="noopener noreferrer">
-          <SiHashnode className="contact-icon" />
-          <h3>Technical Blog</h3>
-          <p>@snehapoojary</p>
-          <span className="contact-open">Read on Hashnode</span>
-        </a>
-        <div className="contact-card">
-          <FaMapMarkerAlt className="contact-icon" />
-          <h3>Location</h3>
-          <p>Thane, India</p>
-          <span className="contact-open">Open to Remote</span>
+        <div className="contact-direct">
+          <p className="contact-direct-row">
+            <span className="contact-label-inline">Email:</span>{" "}
+            <a href="mailto:snehapoojary2004@gmail.com">
+              snehapoojary2004@gmail.com
+            </a>
+          </p>
+          <p className="contact-direct-row">
+            <span className="contact-label-inline">LinkedIn:</span>{" "}
+            <a
+              href="https://www.linkedin.com/in/snehapoojary/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/snehapoojary
+            </a>
+          </p>
         </div>
-        <a className="contact-card" href="https://drive.google.com/file/d/19CHkb1HVqLKDENXDXriFsLuS4kCQvTQz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <FaFileAlt className="contact-icon" />
-          <h3>Resume</h3>
-          <p>Full PDF available</p>
-          <span className="contact-open">Download PDF</span>
-        </a>
+
+        <p className="contact-intro">
+          Have a role, project, or just want to say hi? Fill in the form
+          below and I'll get back to you.
+        </p>
+
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="contact-field">
+            <label htmlFor="name" className="contact-label">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              value={form.name}
+              onChange={handleChange}
+              className="contact-input"
+            />
+          </div>
+
+          <div className="contact-field">
+            <label htmlFor="subject" className="contact-label">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              required
+              value={form.subject}
+              onChange={handleChange}
+              className="contact-input"
+            />
+          </div>
+
+          <div className="contact-field">
+            <label htmlFor="message" className="contact-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              value={form.message}
+              onChange={handleChange}
+              className="contact-textarea"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="contact-submit"
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
+
+          {status === "success" && (
+            <p className="contact-status contact-status-success">
+              Thanks! Your message has been sent.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="contact-status contact-status-error">
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
+        </form>
       </div>
     </section>
   );
-};
-
-export default Contact;
-
-
+}

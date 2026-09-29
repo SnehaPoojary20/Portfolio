@@ -1,36 +1,80 @@
-.achievements { max-width: 1000px; margin: 0 auto; padding: 10vh 6vw; border-top: 1px solid var(--rule); }
-
-.achievements-heading {
-  font-family: var(--sans); font-size: clamp(30px, 4.5vw, 50px);
-  font-weight: 700; letter-spacing: -0.03em; color: var(--text);
-  text-align: center; margin: 0 0 56px;
+.cert-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 140px 20px 60px; /* clear of the fixed navbar */
+  box-sizing: border-box;
 }
 
-.certifications-list { display: flex; flex-direction: column; }
+.cert-container {
+  margin-top: 5%;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.cert-heading {
+  margin: 0 0 48px;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
 
 .cert-row {
-  display: flex; gap: 22px; align-items: flex-start;
-  padding: 2rem 0; border-bottom: 1px solid var(--rule);
-  transition: background 0.2s, padding 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 56px;
 }
 
-.cert-row:first-child { border-top: 1px solid var(--rule); }
-.cert-row:last-child { border-bottom: none; }
-.cert-row:hover { background: var(--black-2); padding-left: 0.75rem; }
-
-.cert-icon { font-size: 1.2rem; color: var(--accent); margin-top: 3px; flex-shrink: 0; }
-.cert-title { font-family: var(--sans); font-size: 17px; font-weight: 600; color: var(--text); margin: 0 0 4px; letter-spacing: -0.01em; }
-
-.cert-platform {
-  font-family: var(--mono); font-size: 10px; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px;
+.cert-image-wrapper {
+  flex: 0 0 45%;
 }
 
-.cert-desc { font-family: var(--sans); font-size: 13.5px; color: var(--text); line-height: 1.75; margin: 0 0 12px; font-weight: 400; }
-.cert-link { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--accent); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; }
-.cert-link:hover { color: var(--accent-2); }
+.cert-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
 
-@media (max-width: 768px) {
-  .cert-row { gap: 16px; }
-  .achievements-heading { font-size: 2rem; margin-bottom: 40px; }
+.cert-content {
+  flex: 1;
+}
+
+.cert-title {
+  margin: 0 0 14px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.cert-text {
+  margin: 0;
+  color: #000;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+@media (max-width: 800px) {
+  .cert-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cert-image-wrapper {
+    flex: none;
+    width: 100%;
+  }
+
+  .cert-heading {
+    font-size: 1.6rem;
+  }
+
+  .cert-text {
+    font-size: 1rem;
+  }
 }

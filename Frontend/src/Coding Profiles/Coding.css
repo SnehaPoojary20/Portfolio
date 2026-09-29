@@ -1,0 +1,68 @@
+.cp-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 140px 20px 60px; /* clear of the fixed navbar */
+  box-sizing: border-box;
+}
+
+.cp-container {
+  margin-top: 5%;
+  width: 90%;
+  max-width: 900px;
+  color: #000;
+  font-style: italic;
+}
+
+.cp-heading {
+  margin: 0 0 32px;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cp-paragraph {
+  margin: 0 0 32px;
+  color: #000;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.cp-row {
+  margin: 0 0 16px;
+  color: #000;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.cp-label {
+  font-weight: 700;
+  font-style: normal; /* labels are bold only */
+}
+
+.cp-row a {
+  color: #000;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.cp-row a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+  .cp-heading {
+    font-size: 1.6rem;
+  }
+
+  .cp-paragraph,
+  .cp-row {
+    font-size: 1rem;
+  }
+}

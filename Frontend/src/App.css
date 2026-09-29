@@ -1,7 +1,0 @@
-.content > * {
-  margin-bottom: 14vh;
-}
-
-.content > *:last-child {
-  margin-bottom: 0;
-}

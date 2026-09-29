@@ -1,26 +1,31 @@
-import Aboutme from './About ME/Aboutme';
-import Education from './Education/Education.jsx';
-import Projects from './Projects/Projects';
-import Certifications from './Certifications/Certifiactions.jsx';
-import Skills from './Skills/Skills';
-import Achievements from './Achievements/Achievements.jsx';
-import Contact from './Contact/Contact';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar/Navbar.jsx";
+import AboutMe from "./About ME/Aboutme.jsx";
+import Skills from "./Skills/Skills.jsx";
+import Blogs from "./Blogs/Blogs.jsx";
+import CodingPlatforms from "./Coding Profiles/Coding.jsx";
+import Contact from "./Contact/Contact.jsx";
+import Certifications from "./Certifications/Certifiactions.jsx";
 
-function App() {
+const Placeholder = ({ title }) => (
+  <h2 style={{ paddingTop: 160, textAlign: "center", fontStyle: "italic" }}>
+    {title}
+  </h2>
+);
+
+export default function App() {
   return (
     <>
-      <Aboutme />
-      <div className="content">
-        <Skills />
-        <Education />
-        <Projects />
-        <Certifications />
-        <Achievements />
-        <Contact />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<AboutMe />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Placeholder title="Projects" />} />
+        <Route path="/coding-platforms" element={<CodingPlatforms />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/certificates" element={<Certifications />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
-
-export default App;
