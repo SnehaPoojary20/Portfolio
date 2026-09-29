@@ -5,6 +5,7 @@ import Skills from "./Skills/Skills.jsx";
 import Blogs from "./Blogs/Blogs.jsx";
 import CodingPlatforms from "./Coding Profiles/Coding.jsx";
 import Contact from "./Contact/Contact.jsx";
+import Projects from "./Projects/Projects.jsx";
 import Certifications from "./Certifications/Certifiactions.jsx";
 
 const Placeholder = ({ title }) => (
@@ -20,7 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<AboutMe />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Placeholder title="Projects" />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/coding-platforms" element={<CodingPlatforms />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/certificates" element={<Certifications />} />
