@@ -1,0 +1,71 @@
+.pd-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 140px 20px 60px;
+  box-sizing: border-box;
+}
+
+.pd-container {
+  margin-top: 5%;
+  width: 90%;
+  max-width: 900px;
+}
+
+.pd-title {
+  margin: 0 0 28px;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.pd-paragraph {
+  margin: 0 0 32px;
+  color: #000;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.pd-row {
+  margin: 0 0 12px;
+  color: #000;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.pd-label {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pd-row a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pd-row a:hover {
+  opacity: 0.6;
+}
+
+.pd-stack {
+  margin: 0 0 32px;
+}
+
+.pd-screens-heading {
+  margin: 40px 0 20px;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .pd-title {
+    font-size: 1.6rem;
+  }
+}

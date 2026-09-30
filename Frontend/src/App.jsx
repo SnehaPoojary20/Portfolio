@@ -7,6 +7,10 @@ import CodingPlatforms from "./Coding Profiles/Coding.jsx";
 import Contact from "./Contact/Contact.jsx";
 import Projects from "./Projects/Projects.jsx";
 import Certifications from "./Certifications/Certifiactions.jsx";
+import NibbleNote from "./Projects/Nibblenote/nn.jsx";
+import ExplainMyCode from "./Projects/ExplainMyCode/emc.jsx";
+import SilentBugPredictor from "./Projects/SilentBugPredictor/sbp.jsx";
+
 
 const Placeholder = ({ title }) => (
   <h2 style={{ paddingTop: 160, textAlign: "center", fontStyle: "italic" }}>
@@ -26,6 +30,9 @@ export default function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/certificates" element={<Certifications />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects/nibblenote" element={<NibbleNote />} />
+        <Route path="/projects/explain-my-code" element={<ExplainMyCode />} />
+        <Route path="/projects/silent-bug-predictor" element={<SilentBugPredictor />} />
       </Routes>
     </>
   );
