@@ -24,7 +24,7 @@ export default function Contact() {
 
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", subject: "", message: "" });
+        setForm({  name: "", email: "", subject: "", message: ""  });
       } else {
         setStatus("error");
       }
@@ -75,6 +75,12 @@ export default function Contact() {
               className="contact-input"
             />
           </div>
+           
+           <div className="contact-field">
+            <label htmlFor="email" className="contact-label">Email</label>
+             <input id="email" name="email" type="email" required value={form.email}
+             onChange={handleChange} className="contact-input" />
+            </div>
 
           <div className="contact-field">
             <label htmlFor="subject" className="contact-label">Subject</label>

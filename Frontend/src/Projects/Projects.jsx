@@ -26,9 +26,7 @@ export default function Projects() {
         <h2 className="projects-heading">Projects</h2>
 
         <p className="projects-intro">
-          I build end-to-end backend systems that go from schema design
-          through testing and CI/CD to live deployment. My projects usually
-          combine asynchronous APIs, real databases, and some form of ML or
+          Three deployed projects: a bug-risk ranker (FastAPI + XGBoost), an AST-first code explainer (FastAPI + Gemini), and a restaurant discovery app (MERN). My projects usually combine asynchronous APIs, real databases, and some form of ML or
           LLM integration, with a focus on secure authentication, graceful
           error handling, and code that's actually tested rather than just
           demoed.

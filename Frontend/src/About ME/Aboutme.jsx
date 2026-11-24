@@ -26,6 +26,11 @@ export default function AboutMe() {
             <strong>Universal College Of Engineering</strong>,{" "}
             <strong>University of Mumbai</strong> from 2022–2026.
           </p>
+          <br></br> <br></br> <br></br>
+          <p className="about-text">
+          <a href="/Sneha_Poojary_Resume.pdf" download>Download my resume</a> ·{" "}
+          <a href="https://github.com/SnehaPoojary20" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
         </div>
       </div>
     </section>

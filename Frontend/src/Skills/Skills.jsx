@@ -2,7 +2,7 @@ import "./Skills.css";
 
 const skillGroups = [
   { label: "Languages", items: ["Java", "Python", "JavaScript", "SQL"] },
-  { label: "Frontend", items: ["React.js", "Tailwind CSS", "Axios"] },
+  { label: "Frontend", items: ["React.js", "Axios"] },
   {
     label: "Backend",
     items: [
@@ -20,11 +20,11 @@ const skillGroups = [
   },
   {
     label: "Database",
-    items: ["PostgreSQL", "MongoDB", "Query Optimization", "Indexing"],
+    items: ["PostgreSQL", "MongoDB", "Aggregation Pipelines", "Indexing"],
   },
   {
     label: "Testing & Quality",
-    items: ["pytest", "Automated Testing", "CI/CD", "Code Review", "Debugging"],
+    items: ["pytest", "Automated Testing", "Debugging"],
   },
   {
     label: "Tools & DevOps",
